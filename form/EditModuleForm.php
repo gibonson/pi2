@@ -25,7 +25,7 @@ class EditModuleForm
                   <input type="hidden" name="scriptContentPath" value="$scriptContentPath"/>
                   <input type="hidden" name="boxBackground" value="$boxBackground"/>
                   <input type="hidden" name="addModule" value="true"/>
-                  <button type="submit">edit</button>
+                  <button type="submit" class="small_button">edit</button>
              </form>
         HTML;
     }

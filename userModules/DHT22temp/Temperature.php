@@ -1,5 +1,5 @@
 <?php
-$cmd = "sudo python modules/"."/script/AdafruitDHT.py 22 4";
+$cmd = "sudo python userModules/"."/script/AdafruitDHT.py 22 4";
 $DHT_temp = shell_exec($cmd);
 
 

@@ -13,7 +13,7 @@ class ModuleScan
      */
     public function __construct($mainDir)
     {
-        $mainDir = $mainDir."/modules";
+        $mainDir = $mainDir."/userModules";
         $this->mainDir = $mainDir;
         $moduleList = scandir($mainDir);
         if (($key = array_search('.', $moduleList)) !== false) {

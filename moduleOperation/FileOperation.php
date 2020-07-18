@@ -7,7 +7,7 @@ class FileOperation
 {
     public function createDir($mainDir, $moduleName, $boxBackground): string
     {
-        $fullPath = $mainDir . "/modules/" . $moduleName;
+        $fullPath = $mainDir . "/userModules/" . $moduleName;
         $permissionCommand = "sudo chmod -R 777 " . $fullPath;
 
         if (!file_exists($fullPath)) {
@@ -39,10 +39,10 @@ class FileOperation
 
     public function createBox($mainDir, $moduleName, $boxName, $boxContent): string
     {
-        $fullPath = $mainDir . "/modules/" . $moduleName;
+        $fullPath = $mainDir . "/userModules/" . $moduleName;
         $permissionCommand = "sudo chmod -R 777 " . $fullPath;
 
-        $boxFile = fopen($mainDir . "/modules/" . $moduleName . "/" . $boxName, "w") or die("Unable to open file!");
+        $boxFile = fopen($mainDir . "/userModules/" . $moduleName . "/" . $boxName, "w") or die("Unable to open file!");
         fwrite($boxFile, $boxContent);
         fclose($boxFile);
 
@@ -52,11 +52,11 @@ class FileOperation
 
     public function createScript($mainDir, $moduleName, $scriptName, $scriptContent): string
     {
-        $fullPath = $mainDir . "/modules/" . $moduleName;
+        $fullPath = $mainDir . "/userModules/" . $moduleName;
         $permissionCommand = "sudo chmod -R 777 " . $fullPath;
 
-        mkdir($mainDir . "/modules/" . $moduleName . "/script/", 0777, true);
-        $scriptFile = fopen($mainDir . "/modules/" . $moduleName . "/script/" . $scriptName, "w") or die("Unable to open file!");
+        mkdir($mainDir . "/userModules/" . $moduleName . "/script/", 0777, true);
+        $scriptFile = fopen($mainDir . "/userModules/" . $moduleName . "/script/" . $scriptName, "w") or die("Unable to open file!");
         fwrite($scriptFile, $scriptContent);
         fclose($scriptFile);
 

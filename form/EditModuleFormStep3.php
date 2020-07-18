@@ -64,7 +64,7 @@ class EditModuleFormStep3
 
         $fileOperation = new FileOperation();
 
-        $boxBackground = str_replace("modules/" . $moduleName . "/", "", $boxBackground);
+        $boxBackground = str_replace("userModules/" . $moduleName . "/", "", $boxBackground);
         echo $boxBackground;
 
         echo $fileOperation->createDir($mainDir, $moduleName, $boxBackground);

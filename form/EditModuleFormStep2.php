@@ -3,6 +3,9 @@
 namespace main;
 require "moduleOperation/FileOperation.php";
 
+//require "fileOperation/FileSearch.php";
+
+
 class EditModuleFormStep2
 {
     /**
@@ -43,6 +46,15 @@ class EditModuleFormStep2
             $scriptContent = "uzupełnij skrypt";
         }
 
+        $type = ["jpg", "png"];
+        new FileSearch('/home/pi/www/img', $type);
+        $fileSelect = "";
+        foreach (FileSearch::getFinalList() as $file) {
+            $fileSelect = $fileSelect . '<option value="' . $file . '">' . $file . '</option>';
+
+        }
+
+
         echo <<<HTML
         <div class="box" style="width: 650px; height: auto; margin: 10px">
             <div class="text">
@@ -70,6 +82,12 @@ class EditModuleFormStep2
                     </textarea>
                     <input type="hidden" name="boxBackground" value="$boxBackground">
                     <input type="hidden" name="addModule" value="final">
+                    
+                     <select id="cars" name="cars">
+                              $fileSelect             
+                      </select>
+                    
+                    
                     <button type="submit">send</button>
                 </form>
                 <form action="index.php" method="post">

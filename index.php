@@ -5,6 +5,7 @@ require "moduleOperation/ModuleScan.php";
 require "moduleOperation/ShowModule.php";
 require "form/EditModuleFormStep2.php";
 require "form/EditModuleFormStep3.php";
+require "fileOperation/FileSearch.php"
 
 ?>
 <html>
@@ -30,12 +31,41 @@ require "form/EditModuleFormStep3.php";
     <div class="header_title">Smart PI</div>
     <div class="header_content">
         <?PHP
+
+
         echo PHP_OS . "    ";
         echo "PHP version: " . PHP_VERSION . "<br>";
         echo $mainDir = '/home/pi/www';
         echo "<br>";
         ?>
     </div>
+    <div class="header_content_left">
+
+        <?php
+        $servername = "localhost";
+        $username = "user";
+        $password = "user";
+
+        // Create connection
+
+        $conn = mysqli_connect($servername, $username, $password);
+
+        // Check connection
+        if (!$conn) {
+            echo '<img src="img/database-close-512.png" alt="failed" style="width:40px;height:40px;   -webkit-filter: invert(1);
+   filter: invert(1);">';
+            echo "Connection failed: " . mysqli_connect_error();
+        } else {
+            echo '<img src="img/database-check-512.png" alt="ok" style="width:40px;height:40px;   -webkit-filter: invert(1);
+   filter: invert(1);">';
+            echo "Connected successfully";
+
+        }
+        ?>
+
+    </div>
+
+
 </header>
 
 <section>
@@ -82,7 +112,20 @@ require "form/EditModuleFormStep3.php";
         }
         new ShowModule($mainDir, $moduleDir);
     }
+
+
+
+
     ?>
+
+
+
+    <?php
+    $type = ["jpg" , "png"];
+    new FileSearch('/home/pi/www/img', $type);
+    print_r(FileSearch::getFinalList());
+    ?>
+
 
 </section>
 
@@ -91,7 +134,7 @@ require "form/EditModuleFormStep3.php";
     <?php
     echo date('Y-m-d H:i:s');
     ?>
-      Jakub Palica &copy; copyright 1410
+    Jakub Palica &copy; copyright 1410
 
 </footer>
 </body>

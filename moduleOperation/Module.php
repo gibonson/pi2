@@ -25,7 +25,7 @@ class Module
 
 
         self::setModuleName($module);
-        $moduleDir = $mainDir . "/modules/" . $module;
+        $moduleDir = $mainDir . "/userModules/" . $module;
 
         $moduleFileList = scandir($moduleDir);
         if (($key = array_search('.', $moduleFileList)) !== false) {
@@ -39,14 +39,14 @@ class Module
         foreach ($moduleFileList as $file) {
             if (strpos($file, 'html')) {
                 self::setBoxName($file);
-                self::setBoxContentPath("modules/" . $module . "/" . $file);
+                self::setBoxContentPath("userModules/" . $module . "/" . $file);
             }
             if (strpos($file, 'php')) {
                 self::setBoxName($file);
-                self::setBoxContentPath("modules/" . $module . "/" . $file);
+                self::setBoxContentPath("userModules/" . $module . "/" . $file);
             }
             if (strpos($file, "jpg")) {
-                self::setBoxBackground("modules/" . $module . "/" . $file);
+                self::setBoxBackground("userModules/" . $module . "/" . $file);
             }
         }
 
@@ -60,7 +60,7 @@ class Module
         }
         foreach ($scriptFileList as $scriptfile) {
             self::setScriptName($scriptfile);
-            self::setScriptContentPath("modules/" . $module . "/script/" . $scriptfile);
+            self::setScriptContentPath("userModules/" . $module . "/script/" . $scriptfile);
         }
     }
 

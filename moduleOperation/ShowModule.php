@@ -27,7 +27,8 @@ class showModule
                 <img class="back" src="<?= $boxBackground ?>" alt="no back">
                 <div class="text">
                     <div class="title"><?= str_replace(".php", "", $module->getBoxName()) ?></div>
-                    <?PHP include $module->getBoxContentPath();
+                    <?PHP include $module->getBoxContentPath(); ?>
+                    <?PHP
                     new EditModuleForm($moduleName, $boxName, $boxContentPath, $scriptName, $scriptContentPath, $boxBackground);
                     ?>
                 </div>
