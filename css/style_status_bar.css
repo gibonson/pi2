@@ -1,0 +1,28 @@
+.progress {
+    display: block;
+    text-align: center;
+    margin: inherit;
+    float: inside;
+
+}
+
+.barOverflow { /* Wraps the rotating .bar */
+    margin-left: 60px;
+    overflow: hidden; /* Comment this line to understand the trick */
+    width: 180px;
+    height: 90px; /* Half circle (overflow) */
+    margin-bottom: -25px; /* bring the numbers up */
+}
+
+.bar {
+    /*position: absolute;*/
+    top: auto;
+    left: auto;
+    width: 180px;
+    height: 180px; /* full circle! */
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 25px solid #ccc; /* half gray, */
+    border-bottom-color: #0bf; /* half azure */
+    border-right-color: #0bf;
+}

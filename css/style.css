@@ -1,0 +1,80 @@
+body {
+    font-family: 'Courier New', sans-serif;
+    line-height: 1.5;
+    background-image: url("../img/photo-1506875644286-0fa3dc4df91f.jpg");
+    background-attachment: fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: #111111;
+    color: #ffda8f;
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%);
+    z-index: 99;
+}
+
+.header_title {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+.header_content {
+    position: relative;
+    text-align: right;
+    margin: 10px;
+
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    background-image: linear-gradient(to bottom, rgba(43, 43, 43, 0), rgba(0, 0, 0, 0.9) 80%);
+}
+
+section {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    background: #111111;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.box .text {
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+.box .text .title {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.box .back {
+    border-radius: 6px;
+    height: 300px;
+    width: 300px;
+    filter: grayscale(100%) brightness(10%);
+    position: absolute;
+}
