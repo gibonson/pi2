@@ -35,24 +35,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="W:/modules/CPU-temp" />
+    <property name="last_opened_file_path" value="W:/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\img" />
       <recent name="W:\modules\CPU-temp" />
       <recent name="W:\externalLibraries\DHT22" />
       <recent name="W:\externalLibraries" />
       <recent name="W:\modules\DHT22temp\script" />
-      <recent name="C:\programing\xampp\htdocs\pi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\fileOperation" />
+      <recent name="W:\templates" />
       <recent name="W:\moduleOperation" />
       <recent name="W:\modules\LCD-alarm\script" />
       <recent name="W:\" />
-      <recent name="W:\modules\DTH22humi\script" />
-      <recent name="W:\modules\FOTO\script" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -102,6 +102,13 @@
       <workItem from="1594501069152" duration="2964000" />
       <workItem from="1594761145084" duration="1309000" />
       <workItem from="1594843738268" duration="6412000" />
+      <workItem from="1595106313236" duration="7858000" />
+      <workItem from="1595190141154" duration="7575000" />
+      <workItem from="1595274972322" duration="9250000" />
+      <workItem from="1595447709066" duration="8798000" />
+      <workItem from="1595535114173" duration="1948000" />
+      <workItem from="1595584125386" duration="4977000" />
+      <workItem from="1595593305326" duration="2572000" />
     </task>
     <servers />
   </component>
@@ -109,34 +116,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591309153954">
+    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595196776115">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1591309153954" />
-    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser" timestamp="1594152899718">
+    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1595196776115" />
+    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser" timestamp="1595585408873">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1594152899718" />
-    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592775601438">
+    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1595585408873" />
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595593709478">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1592775601438" />
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595593709478" />
     <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590532847295">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1590532847295" />
-    <state x="597" y="437" key="FileChooserDialogImpl" timestamp="1591306782028">
+    <state x="597" y="437" key="FileChooserDialogImpl" timestamp="1595593300205">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="597" y="437" key="FileChooserDialogImpl/0.40.3440.1400@0.40.3440.1400" timestamp="1591306782028" />
-    <state x="659" y="511" key="NewPhpClassDialog" timestamp="1592861705456">
+    <state x="597" y="437" key="FileChooserDialogImpl/0.40.3440.1400@0.40.3440.1400" timestamp="1595593300205" />
+    <state x="659" y="511" key="NewPhpClassDialog" timestamp="1595594804566">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="659" y="511" key="NewPhpClassDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1592861705456" />
-    <state x="915" y="697" key="NewPhpFileDialog" timestamp="1591394792674">
+    <state x="659" y="511" key="NewPhpClassDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595594804566" />
+    <state x="915" y="697" key="NewPhpFileDialog" timestamp="1595449500766">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="915" y="697" key="NewPhpFileDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1591394792674" />
+    <state x="915" y="697" key="NewPhpFileDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595449500766" />
     <state x="252" y="296" key="SettingsEditor" timestamp="1592083895654">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
@@ -145,10 +152,10 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state width="623" height="498" key="SwitcherDM/0.40.3440.1400@0.40.3440.1400" timestamp="1594241822009" />
-    <state x="-7" y="40" width="1734" height="1407" key="dock-window-1" timestamp="1590264304640">
+    <state x="1571" y="40" width="1386" height="1370" key="dock-window-1" timestamp="1595593987726">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="-7" y="40" width="1734" height="1407" key="dock-window-1/0.40.3440.1400@0.40.3440.1400" timestamp="1590264304640" />
+    <state x="1571" y="40" width="1386" height="1370" key="dock-window-1/0.40.3440.1400@0.40.3440.1400" timestamp="1595593987726" />
     <state x="-7" y="40" width="1734" height="1407" key="dock-window-2" timestamp="1590273955122">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
@@ -157,17 +164,17 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="542" y="317" key="refactoring.ChangeSignatureDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1592257461164" />
-    <state x="94" y="366" key="run.anything.popup" timestamp="1594501286082">
+    <state x="94" y="366" key="run.anything.popup" timestamp="1595280034499">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="94" y="366" key="run.anything.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1594501286082" />
+    <state x="94" y="366" key="run.anything.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1595280034499" />
     <state x="446" y="352" width="840" height="1034" key="search.everywhere.popup" timestamp="1594762544794">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="446" y="352" width="840" height="1034" key="search.everywhere.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1594762544794" />
-    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1592945219234">
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595194074267">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1592945219234" />
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595194074267" />
   </component>
 </project>

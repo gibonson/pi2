@@ -1,12 +1,12 @@
 body {
     font-family: 'Courier New', sans-serif;
     line-height: 1.5;
-    background-image: url("../img/photo-1506875644286-0fa3dc4df91f.jpg");
+    background-image: url("../img/woda.jpg");
     background-attachment: fixed;
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-color: #111111;
+    background-color: #000000;
     color: #fff1c6;
     margin: auto;
 }

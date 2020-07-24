@@ -1,11 +1,13 @@
 <?php
 namespace main;
-require "moduleOperation/Module.php";
-require "moduleOperation/ModuleScan.php";
-require "moduleOperation/ShowModule.php";
-require "form/EditModuleFormStep2.php";
-require "form/EditModuleFormStep3.php";
-require "fileOperation/FileSearch.php"
+require "fileOperation/FileScan.php";
+require "fileOperation/FileSearch.php";
+require "services/Service.php";
+require "templates/ShowService.php";
+require "templates/form/EditServiceForm.php";
+require "templates/form/AddEditServiceFormStep1.php";
+require "templates/form/AddEditServiceFormStep2.php";
+
 
 ?>
 <html>
@@ -28,14 +30,16 @@ require "fileOperation/FileSearch.php"
 <body>
 
 <header class="header">
-    <div class="header_title">Smart PI</div>
+    <div class="header_title"><Smart PI</div>
     <div class="header_content">
         <?PHP
-
-
         echo PHP_OS . "    ";
         echo "PHP version: " . PHP_VERSION . "<br>";
         echo $mainDir = '/home/pi/www';
+        echo "<br>";
+        echo $systemServicesDirectory = '/home/pi/www/systemServices';
+        echo "<br>";
+        echo $userServicesDirectory = '/home/pi/www/userServices';
         echo "<br>";
         ?>
     </div>
@@ -70,67 +74,67 @@ require "fileOperation/FileSearch.php"
 
 <section>
     <?php
-    if ($_POST["addModule"] == "true") {
+    switch ($_POST["form"]) {
+        case "addFormStep1":
+            new AddEditServiceFormStep1($_POST["ServiceName"], $_POST["boxName"], $_POST["iotLibraries"], $_POST["boxBackground"]);
+            break;
+        case "addFormStep2":
+            new AddEditServiceFormStep2($_POST["ServiceName"], $_POST["boxName"], $_POST["boxContent"],
+                $_POST["iotLibraries"], $_POST["boxBackground"]);
+            break;
+        default:
+            $userServicesList = new FileScan($userServicesDirectory);
+            foreach ($userServicesList->getFileList() as $servisName) {
+                if (strpos($servisName, "old")) {
+                    continue;
+                }
+                $serviseType = "user";
+                new Service($userServicesDirectory, $servisName, $serviseType);
+            }
 
-        $moduleName = $_POST["moduleName"];
-        $boxName = $_POST["boxName"];
-        $scriptName = $_POST["scriptName"];
-        $scriptContentPath = $_POST["scriptContentPath"];
-        $boxContentPath = $_POST["boxContentPath"];
-        $boxBackground = $_POST["boxBackground"];
-
-        new EditModuleFormStep2($mainDir, $moduleName, $boxName, $scriptName, $boxContentPath, $scriptContentPath, $boxBackground);
+            $systemServicesList = new FileScan($systemServicesDirectory);
+            foreach ($systemServicesList->getFileList() as $servisName) {
+                $serviseType = "system";
+                new Service($systemServicesDirectory, $servisName, $serviseType);
+            }
     }
 
-    if ($_POST["addModule"] == "final") {
-
-        $oldModuleName = $_POST["oldModuleName"];
-        $moduleName = $_POST["moduleName"];
-        $oldBoxName = $_POST["oldBoxName"];
-        $boxName = $_POST["boxName"];
-        $oldBoxContent = $_POST["oldBoxContent"];
-        $boxContent = $_POST["boxContent"];
-        $oldScriptName = $_POST["oldScriptName"];
-        $scriptName = $_POST["scriptName"];
-        $oldScriptContent = $_POST["oldScriptContent"];
-        $scriptContent = $_POST["scriptContent"];
-        $boxBackground = $_POST["boxBackground"];
-
-
-        new EditModuleFormStep3($mainDir, $oldModuleName, $moduleName, $oldBoxName, $boxName, $oldBoxContent, $boxContent,
-            $oldScriptName, $scriptName, $oldScriptContent, $scriptContent, $boxBackground);
-    }
-
-
-    new ModuleScan($mainDir);
-    foreach (ModuleScan::$list as $moduleDir) {
-        if (strpos($moduleDir, "hide")) {
-            continue;
-        }
-        if (strpos($moduleDir, "old")) {
-            continue;
-        }
-        new ShowModule($mainDir, $moduleDir);
-    }
-
-
+    //    if ($_POST["addModule"] == "true") {
+    //
+    //        $moduleName = $_POST["moduleName"];
+    //        $boxName = $_POST["boxName"];
+    //        $scriptName = $_POST["scriptName"];
+    //        $scriptContentPath = $_POST["scriptContentPath"];
+    //        $boxContentPath = $_POST["boxContentPath"];
+    //        $boxBackground = $_POST["boxBackground"];
+    //
+    //        new AddEditServiceFormStep2($mainDir, $moduleName, $boxName, $scriptName, $boxContentPath, $scriptContentPath, $boxBackground);
+    //    }
+    //
+    //    if ($_POST["addModule"] == "final") {
+    //
+    //        $oldModuleName = $_POST["oldModuleName"];
+    //        $moduleName = $_POST["moduleName"];
+    //        $oldBoxName = $_POST["oldBoxName"];
+    //        $boxName = $_POST["boxName"];
+    //        $oldBoxContent = $_POST["oldBoxContent"];
+    //        $boxContent = $_POST["boxContent"];
+    //        $oldScriptName = $_POST["oldScriptName"];
+    //        $scriptName = $_POST["scriptName"];
+    //        $oldScriptContent = $_POST["oldScriptContent"];
+    //        $scriptContent = $_POST["scriptContent"];
+    //        $boxBackground = $_POST["boxBackground"];
+    //
+    //
+    //        new EditModuleFormStep3($mainDir, $oldModuleName, $moduleName, $oldBoxName, $boxName, $oldBoxContent, $boxContent,
+    //            $oldScriptName, $scriptName, $oldScriptContent, $scriptContent, $boxBackground);
+    //    }
 
 
     ?>
-
-
-
-    <?php
-    $type = ["jpg" , "png"];
-    new FileSearch('/home/pi/www/img', $type);
-    print_r(FileSearch::getFinalList());
-    ?>
-
-
 </section>
 
 <footer>
-
     <?php
     echo date('Y-m-d H:i:s');
     ?>
