@@ -6,16 +6,16 @@ class AddEditServiceFormStep2
 {
     public function __construct($ServiceName, $boxName, $boxContent, $fileIotLibraries, $fileBackground)
     {
-        echo $ServiceName;
-        echo "<br>";
-        echo $boxName;
-        echo "<br>";
-        echo "<br>";
-        echo '<TEXTAREA readonly rows = "10" cols = "50" >' . $boxContent . '</TEXTAREA ></td >';
-        echo "<br>";
-        echo $fileIotLibraries;
-        echo "<br>";
-        echo $fileBackground;
+//        echo $ServiceName;
+//        echo "<br>";
+//        echo $boxName;
+//        echo "<br>";
+//        echo "<br>";
+//        echo '<TEXTAREA readonly rows = "10" cols = "50" >' . $boxContent . '</TEXTAREA ></td >';
+//        echo "<br>";
+//        echo $fileIotLibraries;
+//        echo "<br>";
+//        echo $fileBackground;
 
 
         $addEditServie = new AddEditService();

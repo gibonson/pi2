@@ -35,24 +35,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="W:/" />
+    <property name="last_opened_file_path" value="W:/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\css" />
       <recent name="W:\img" />
       <recent name="W:\modules\CPU-temp" />
       <recent name="W:\externalLibraries\DHT22" />
       <recent name="W:\externalLibraries" />
-      <recent name="W:\modules\DHT22temp\script" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\iotLibraries\LCD" />
       <recent name="W:\fileOperation" />
       <recent name="W:\templates" />
       <recent name="W:\moduleOperation" />
       <recent name="W:\modules\LCD-alarm\script" />
-      <recent name="W:\" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -109,6 +109,10 @@
       <workItem from="1595535114173" duration="1948000" />
       <workItem from="1595584125386" duration="4977000" />
       <workItem from="1595593305326" duration="2572000" />
+      <workItem from="1595620334785" duration="1966000" />
+      <workItem from="1595622339770" duration="11492000" />
+      <workItem from="1595716828586" duration="2345000" />
+      <workItem from="1595799527103" duration="4321000" />
     </task>
     <servers />
   </component>
@@ -124,22 +128,22 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1595585408873" />
-    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595593709478">
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595621135327">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595593709478" />
-    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590532847295">
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595621135327" />
+    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595631449317">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1590532847295" />
+    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595631449317" />
     <state x="597" y="437" key="FileChooserDialogImpl" timestamp="1595593300205">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="597" y="437" key="FileChooserDialogImpl/0.40.3440.1400@0.40.3440.1400" timestamp="1595593300205" />
-    <state x="659" y="511" key="NewPhpClassDialog" timestamp="1595594804566">
+    <state x="659" y="511" key="NewPhpClassDialog" timestamp="1595800016258">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="659" y="511" key="NewPhpClassDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595594804566" />
+    <state x="659" y="511" key="NewPhpClassDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595800016258" />
     <state x="915" y="697" key="NewPhpFileDialog" timestamp="1595449500766">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
@@ -152,14 +156,18 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state width="623" height="498" key="SwitcherDM/0.40.3440.1400@0.40.3440.1400" timestamp="1594241822009" />
-    <state x="1571" y="40" width="1386" height="1370" key="dock-window-1" timestamp="1595593987726">
+    <state x="1508" y="40" width="1375" height="1370" key="dock-window-1" timestamp="1595628197211">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="1571" y="40" width="1386" height="1370" key="dock-window-1/0.40.3440.1400@0.40.3440.1400" timestamp="1595593987726" />
-    <state x="-7" y="40" width="1734" height="1407" key="dock-window-2" timestamp="1590273955122">
+    <state x="1508" y="40" width="1375" height="1370" key="dock-window-1/0.40.3440.1400@0.40.3440.1400" timestamp="1595628197211" />
+    <state x="1360" y="40" width="1375" height="1377" key="dock-window-2" timestamp="1595633458841">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="-7" y="40" width="1734" height="1407" key="dock-window-2/0.40.3440.1400@0.40.3440.1400" timestamp="1590273955122" />
+    <state x="1360" y="40" width="1375" height="1377" key="dock-window-2/0.40.3440.1400@0.40.3440.1400" timestamp="1595633458841" />
+    <state x="1914" y="175" width="1375" height="1377" key="dock-window-3" timestamp="1595633458842">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1914" y="175" width="1375" height="1377" key="dock-window-3/0.40.3440.1400@0.40.3440.1400" timestamp="1595633458842" />
     <state x="542" y="317" key="refactoring.ChangeSignatureDialog" timestamp="1592257461164">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
@@ -172,9 +180,9 @@
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
     <state x="446" y="352" width="840" height="1034" key="search.everywhere.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1594762544794" />
-    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595194074267">
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1595621041410">
       <screen x="0" y="40" width="3440" height="1400" />
     </state>
-    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595194074267" />
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1595621041410" />
   </component>
 </project>

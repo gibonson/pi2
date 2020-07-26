@@ -36,9 +36,6 @@ header {
     margin: 10px;
 }
 
-
-
-
 footer {
     text-align: center;
     position: fixed;
@@ -59,9 +56,9 @@ section {
 
 .box {
     background: #111111;
-    margin: 10px;
-    width: 300px;
-    height: 300px;
+    margin: 5px;
+    width: 310px;
+    height: 310px;
     border-radius: 6px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
@@ -79,8 +76,8 @@ section {
 
 .box .back {
     border-radius: 6px;
-    height: 300px;
-    width: 300px;
+    height: 310px;
+    width: 310px;
     filter: grayscale(100%) brightness(10%);
     position: absolute;
 }

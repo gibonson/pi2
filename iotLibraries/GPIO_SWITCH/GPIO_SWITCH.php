@@ -7,24 +7,36 @@ foreach ($_GET['gpio'] as $gpio) {
     echo "<br>";
     shell_exec($commandGpioOut);
 
-    if ($_GET['gpioValue'] == null) {
-        echo $commandGpioRead = "gpio -g read " . $gpio;
-        echo "<br>";
-        echo $commandGpioWriteHigh = "gpio -g write " . $gpio . " 1";
-        echo "<br>";
-        echo $commandGpioWriteLow = "gpio -g write " . $gpio . " 0";
-        echo "<br>";
 
-        $status = shell_exec($commandGpioRead);
-        if ($status == 0) {
-            shell_exec($commandGpioWriteHigh);
+    if ($_GET['delay'] == null) {
+        if ($_GET['gpioValue'] == null) {
+            $commandGpioRead = "gpio -g read " . $gpio;
+            $commandGpioWriteHigh = "gpio -g write " . $gpio . " 1";
+            $commandGpioWriteLow = "gpio -g write " . $gpio . " 0";
+
+            $status = shell_exec($commandGpioRead);
+            if ($status == 0) {
+                shell_exec($commandGpioWriteHigh);
+            } else {
+                shell_exec($commandGpioWriteLow);
+            }
         } else {
-            shell_exec($commandGpioWriteLow);
+            echo $commandgpioValue = "gpio -g write " . $gpio . " " . $_GET['gpioValue'];
+            shell_exec($commandgpioValue);
+            echo "<br>";
         }
     } else {
-        echo $commandgpioValue = "gpio -g write " . $gpio . " " . $_GET['gpioValue'];
-        shell_exec($commandgpioValue);
-        echo "<br>";
+        echo $delay = $_GET['delay'];
+        $status = shell_exec("gpio -g read " . $gpio);
+        if ($status == 0) {
+            shell_exec('gpio -g write' . $gpio . ' 1');
+            sleep($delay);
+            shell_exec('gpio -g write ' . $gpio . ' 0');
+        } else {
+            shell_exec('gpio -g write ' . $gpio . ' 0');
+            sleep($delay);
+            shell_exec('gpio -g write ' . $gpio . ' 1');
+        }
     }
 }
 header("Location: ../../index.php");

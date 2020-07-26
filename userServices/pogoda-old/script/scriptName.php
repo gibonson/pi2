@@ -1,2 +1,0 @@
-            uzupełnij skrypt
-            
