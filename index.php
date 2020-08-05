@@ -1,18 +1,23 @@
 <?php
 namespace main;
+session_start();
 require "fileOperation/FileScan.php";
 require "fileOperation/FileSearch.php";
 require "fileOperation/Service.php";
 require "fileOperation/AddEditService.php";
 require "templates/ShowService.php";
-require "templates/form/EditServiceForm.php";
+require "templates/form/AddEditServiceForm.php";
 require "templates/form/AddEditServiceFormStep1.php";
 require "templates/form/AddEditServiceFormStep2.php";
 require "dataBase/DataBaseTest.php";
 
+
 $mainDir = '/home/pi/www';
 $systemServicesDirectory = '/home/pi/www/systemServices';
 $userServicesDirectory = '/home/pi/www/userServices';
+$iotLibrariesDirectory = '/home/pi/www/iotLibraries';
+
+
 ?>
 <html>
 <head>
@@ -43,9 +48,27 @@ $userServicesDirectory = '/home/pi/www/userServices';
                 <li><a href="index.php"><img src="img/home.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
    filter: invert(1);"></a></li>
                 <li><a href="#"><?php new DataBaseTest() ?></a></li>
+                <li><a href="systemServices/777/Chmod777.php?777=true"><img src="img/777.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
+   filter: invert(1);""></a></li>
+                <!--                <li><a href="#">reszta nie dziala</li>-->
 
-                <li><a href="systemServices/calendar_form/calform.php"><img src="img/calendar-time-icon.png" alt="ok"
-                                                                            style="width:40px;height:40px;   -webkit-filter: invert(1);
+
+                <li class='sub-menu'><a href="#"><img src="img/add-image-png.png" style="width:40px;height:40px;"></a>
+                    <ul>
+                        <?php
+                        $iotDirList = new FileScan($iotLibrariesDirectory);
+                        foreach ($iotDirList->getFileList() as $iotLib) {
+                            echo '<li>';
+                            new AddEditServiceForm("NewService", "Newox.php", "iot-template", $iotLib, "", $iotLib);
+                            echo '</li>';
+                        }
+                        ?>
+                    </ul>
+                </li>
+
+
+                <li><a href="calendar/ShowCalendar.php"><img src="img/calendar-time-icon.png" alt="ok"
+                                                                       style="width:40px;height:40px;   -webkit-filter: invert(1);
    filter: invert(1);"><i class='fa fa-angle-down'></i></a>
                     <ul>
                         <li><a href="#">Category One</a></li>
@@ -53,9 +76,18 @@ $userServicesDirectory = '/home/pi/www/userServices';
                         <li><a href="#">Category Three</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a href="systemServices/calendar/calendarTest.php"><img src="img/seting.png"
-                                                                                             style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""><i class='fa fa-angle-down'></i></a>
+
+                <li><a href="index.php"><img src="img/seting.png"
+                                             style="width:40px;height:40px;   -webkit-filter: invert(1);
+   filter: invert(1);""></a></li>
+
+                <li><a href="index.php"><img src="img/user.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
+   filter: invert(1);""></a></li>
+
+
+                <li class='sub-menu'><a href="systemServices/calendar/calendarTest.php"><img src="img/RPi-Logo.png"
+                                                                                             style="height:40px;">
+                        <i class='fa fa-angle-down'></i></a>
                     <ul>
                         <li><a href="#">OS: <?= PHP_OS ?></a></li>
                         <li><a href="#">PHP version: <?= PHP_VERSION ?></a></li>
@@ -64,14 +96,6 @@ $userServicesDirectory = '/home/pi/www/userServices';
                         <li><a href="#">User Services: <?= $userServicesDirectory ?></a></li>
                     </ul>
                 </li>
-                <li><a href="index.php"><img src="img/RPi-Logo.png" style="height:40px;"></a></li>
-                <li><a href="index.php"><img src="img/777.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""></a>
-                </li>
-                <li><a href="index.php"><img src="img/user.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""></a></li>
-                <li><a href="systemServices/addModule/Add%20Module.php"><img src="img/add-image-png.png"
-                                                                             style="width:40px;height:40px;"></a></li>
             </ul>
         </div>
     </nav>
@@ -83,11 +107,15 @@ $userServicesDirectory = '/home/pi/www/userServices';
     <?php
     switch ($_POST["form"]) {
         case "addFormStep1":
-            new AddEditServiceFormStep1($_POST["ServiceName"], $_POST["boxName"], $_POST["iotLibraries"], $_POST["boxBackground"]);
+            new AddEditServiceFormStep1($_POST["ServiceName"], $_POST["boxName"], $_POST["boxContent"],
+                $_POST["iotLibraries"], $_POST["boxBackground"]);
             break;
         case "addFormStep2":
             new AddEditServiceFormStep2($_POST["ServiceName"], $_POST["boxName"], $_POST["boxContent"],
                 $_POST["iotLibraries"], $_POST["boxBackground"]);
+            break;
+        case "nowy":
+            echo "nowy";
             break;
         default:
             $userServicesList = new FileScan($userServicesDirectory);
@@ -98,12 +126,6 @@ $userServicesDirectory = '/home/pi/www/userServices';
                 $serviseType = "user";
                 new Service($userServicesDirectory, $servisName, $serviseType);
             }
-
-//            $systemServicesList = new FileScan($systemServicesDirectory);
-//            foreach ($systemServicesList->getFileList() as $servisName) {
-//                $serviseType = "system";
-//                new Service($systemServicesDirectory, $servisName, $serviseType);
-//            }
     }
     ?>
 </section>

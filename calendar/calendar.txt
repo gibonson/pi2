@@ -1,4 +1,0 @@
-15:20>gpio -g write 18 1
-13:30>polecenie
-13:30>polecenie
-13:30>polecenie

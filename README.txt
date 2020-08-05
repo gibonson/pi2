@@ -15,10 +15,6 @@ ps ax | grep 'php -f /home/pi/www/calendar/cronPi.php'
 
 php -f /home/pi/www/calendar/cronPi.php
 
-<?php
-$homepage = file_get_contents('');
-echo $homepage;
-?>
 
 
 
@@ -30,3 +26,6 @@ sudo addgroup www-data
 sudo visudo and add
 #includedir /etc/sudoers.d
 %www-data  ALL=(ALL:ALL) NOPASSWD:ALL
+
+
+2020-07-29- poprawioni dziłanie DHT wstawienie wartości do zmiennej $_SESSION

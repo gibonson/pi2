@@ -1,5 +1,5 @@
 <form action="iotLibraries/433/443.php">
-    <button class="button" type="submit">eeee</button>
+    <button class="button" type="submit">SEND SIGNAL</button>
     <br>
     <br>
     <select id="socket" name="socket">

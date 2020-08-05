@@ -1,14 +1,11 @@
 <?php
 
-use calendar\event;
+namespace calendar;
 
 require "event.php";
 
-//24 * 60 * 60 = 86400
-//shell_exec('gpio -g write 18 1');
-//shell_exec('gpio -g write 18 0');
 $eventList[] = null;
-$myfile = fopen("/home/pi/www/calendar/calendar.txt", "r") or die("Unable to open file!");
+$myfile = fopen("/home/pi/www/calendar-old/calendar-old.txt", "r") or die("Unable to open file!");
 
 while (!feof($myfile)) {
 
@@ -22,7 +19,7 @@ while (!feof($myfile)) {
 fclose($myfile);
 echo "\n";
 
-print_r($eventList);
+//print_r($eventList);
 unset($eventList[0]);
 print_r($eventList);
 
@@ -41,10 +38,10 @@ while (true) {
     echo " ";
     echo $date = date("H") * 60 + date("i");
     echo "\n";
-    foreach ($eventList as $event => $value) {
-        if ($value->getDate() == $date) {
-            echo $value->getDate() . "jest rowne dacie" . $date."\n";
-            echo $command = $value->getCommand()."\n";
+    foreach ($eventList as $event => $item) {
+        if ($item->getDate() == $date) {
+            echo $item->getDate() . "jest rowne dacie" . $date . "\n";
+            echo $command = $item->getCommand() . "\n";
             shell_exec($command);
         }
     }

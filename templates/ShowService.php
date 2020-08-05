@@ -14,7 +14,7 @@ class showService
                 <?PHP include $boxContentPath; ?>
                 <?PHP
                 if($serviseType == "user"){
-                    new EditServiceForm($servisName, $boxName, $boxContentPath, $iotLibraries, $boxBackground);
+                    new AddEditServiceForm($servisName, $boxName, $boxContentPath, $iotLibraries, $boxBackground, "Edit");
                 }
                 ?>
             </div>

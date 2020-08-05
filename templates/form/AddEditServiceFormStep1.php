@@ -6,18 +6,8 @@ namespace main;
 class AddEditServiceFormStep1
 {
 
-    public function __construct($ServiceName, $boxName, $iotLibraries, $boxBackground)
+    public function __construct($ServiceName, $boxName, $boxContent, $iotLibraries, $boxBackground)
     {
-
-        if ($iotLibraries == "") {
-            new FileScan("/home/pi/www/iotLibraries");
-            $fileIotLibraries = "";
-            foreach (FileScan::getFileList() as $file) {
-                $fileIotLibraries = $fileIotLibraries . '<option value="' . $file . '">' . $file . '</option>';
-            }
-        } else {
-            $fileIotLibraries = '<option value="' . $iotLibraries . '">' . $iotLibraries . '</option>';
-        }
 
 
         if ($boxBackground == "") {
@@ -32,18 +22,39 @@ class AddEditServiceFormStep1
             $fileBackground = '<option value="' . $boxBackground . '">' . $boxBackground . '</option>';
         }
 
-        $boxContent = "";
-        $boxContentPath = "/home/pi/www/userServices/" . $ServiceName . "/" . $boxName;
-        if (file_exists($boxContentPath)) {
-            $file = fopen($boxContentPath, "r");
-            while (!feof($file)) {
-                $boxContent = $boxContent . fgets($file);
+        $boxContentFinal = "";
+        if ($boxContent == "iot-template") {
+            $boxContentPath = "/home/pi/www/iotLibraries/" . $iotLibraries . "/newTemplate.txt";
+            if (file_exists($boxContentPath)) {
+                $file = fopen($boxContentPath, "r");
+                while (!feof($file)) {
+                    $boxContentFinal = $boxContentFinal . fgets($file);
+                }
+                fclose($file);
             }
-            fclose($file);
+        } elseif ($boxContent == "") {
+            $boxContentFinal = "uzupełnij boxa";
         } else {
-            $boxContent = "uzupełnij boxa";
+            $boxContentPath = "/home/pi/www/userServices/" . $ServiceName . "/" . $boxName;
+            if (file_exists($boxContentPath)) {
+                $file = fopen($boxContentPath, "r");
+                while (!feof($file)) {
+                    $boxContentFinal = $boxContentFinal . fgets($file);
+                }
+                fclose($file);
+            }
         }
 
+
+        if ($iotLibraries == "") {
+            new FileScan("/home/pi/www/iotLibraries");
+            $fileIotLibraries = "";
+            foreach (FileScan::getFileList() as $file) {
+                $fileIotLibraries = $fileIotLibraries . '<option value="' . $file . '">' . $file . '</option>';
+            }
+        } else {
+            $fileIotLibraries = '<option value="' . $iotLibraries . '">' . $iotLibraries . '</option>';
+        }
 
         echo <<<HTML
          <div class="box" style="width: auto; height: auto; margin: 10px">
@@ -59,7 +70,7 @@ class AddEditServiceFormStep1
                 </tr>
                 <tr>
                     <th>zawartosc formularza</th>
-                    <th><textarea rows="20" cols="75" name="boxContent"style="margin: 30px">$boxContent</textarea></th>
+                    <th><textarea rows="20" cols="75" name="boxContent"style="margin: 30px">$boxContentFinal</textarea></th>
                 </tr>
                 <tr>
                     <th>docelowa biblioteka</th>
@@ -78,4 +89,5 @@ class AddEditServiceFormStep1
          </div>
          HTML;
     }
+
 }

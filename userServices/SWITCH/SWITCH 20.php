@@ -6,8 +6,7 @@
     if ($status == 0) {
         echo "background-color: #AF4C4C ";
     }
-    ?>" type="submit">led1
-    </button>
+    ?>" type="submit">SWITCH</button>
 </form>
 
 

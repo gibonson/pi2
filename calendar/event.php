@@ -1,66 +1,42 @@
 <?php
 
-namespace calendar;
 
-class event
+class Event
 {
-    public $date;   //data w minutach od poczatku doby
-    public $dateFull; //date("H:i:s");
+    public $time;
     public $command;
 
-    public function __construct($line)
-    {
-
-        $event = explode(">", $line);
-        //echo $event[0] . "\n";
-        //11:09
-        $this->dateFull = $event[0];
-        $event[0] = explode(":", $event[0]);
-        //print_r($event[0]);
-        $event[0] = $event[0][0] * 60 + $event[0][1];
-        $this->date = $event[0];
-        //echo $event[0] . "\n";
-
-        //echo $event[1] . "\n";
-        $this->command = $event[1];
-    }
-
     /**
-     * @return float|int|mixed
+     * Event constructor.
+     * @param $time
+     * @param $command
      */
-    public function getDateFull()
+    public function __construct($time, $command)
     {
-        return $this->dateFull;
-    }
-
-    /**
-     * @param float|int|mixed $dateFull
-     */
-    public function setDateFull($dateFull): void
-    {
-        $this->dateFull = $dateFull;
-    }
-
-    /**
-     * @return float|int|mixed
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param float|int|mixed $date
-     */
-    public function setDate($date): void
-    {
-        $this->date = $date;
+        $this->time = $time;
+        $this->command = $command;
     }
 
     /**
      * @return mixed
      */
-    public function getCommand(): string
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * @param mixed $time
+     */
+    public function setTime($time): void
+    {
+        $this->time = $time;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCommand()
     {
         return $this->command;
     }
@@ -72,6 +48,9 @@ class event
     {
         $this->command = $command;
     }
+
+
+
 
 
 }

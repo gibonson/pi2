@@ -5,7 +5,7 @@ use calendar\event;
 require "event.php";
 
 $eventList[] = null;
-$myfile = fopen("/home/pi/www/calendar/calendar.txt", "r") or die("Unable to open file!");
+$myfile = fopen("/home/pi/www/calendar-old/calendar-old.txt", "r") or die("Unable to open file!");
 
 while (!feof($myfile)) {
     $line = fgets($myfile);
