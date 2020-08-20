@@ -1,5 +1,6 @@
 <?php
 
+namespace calendar;
 
 class Event
 {
@@ -15,7 +16,16 @@ class Event
     {
         $this->time = $time;
         $this->command = $command;
+
     }
+
+    public function getCodeTime()
+    {
+        $codeTime = explode(":", $this->time);
+        $codeTime = $codeTime[0] * 60 + $codeTime[1];
+        return $codeTime;
+    }
+
 
     /**
      * @return mixed
@@ -48,9 +58,6 @@ class Event
     {
         $this->command = $command;
     }
-
-
-
 
 
 }

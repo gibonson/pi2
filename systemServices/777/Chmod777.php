@@ -1,11 +1,6 @@
 <?php
 
-
-if (isset($_GET['777'])) {
-    new Chmod777();
-} else {
-    header("Location: ../../index.php");
-}
+new Chmod777();
 
 
 class Chmod777
@@ -15,7 +10,7 @@ class Chmod777
         echo "test";
         $permissionCommand = "sudo chmod -R 777 " . "/home/pi/www/";
         exec($permissionCommand);
-        header("Location: ../../index.php");
+        header("Location: index");
     }
 }
 

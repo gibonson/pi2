@@ -12,7 +12,7 @@ class AddEditServiceFormStep1
 
         if ($boxBackground == "") {
             $type = ["jpg", "png"];
-            new FileSearch('/home/pi/www/img', $type);
+            new FileSearch('/home/pi/www/background', $type);
 
             $fileBackground = "";
             foreach (FileSearch::getFinalList() as $file) {
@@ -35,7 +35,7 @@ class AddEditServiceFormStep1
         } elseif ($boxContent == "") {
             $boxContentFinal = "uzupełnij boxa";
         } else {
-            $boxContentPath = "/home/pi/www/userServices/" . $ServiceName . "/" . $boxName;
+            $boxContentPath = "/home/pi/www/userFiles/" . $ServiceName . "/" . $boxName;
             if (file_exists($boxContentPath)) {
                 $file = fopen($boxContentPath, "r");
                 while (!feof($file)) {
@@ -58,7 +58,7 @@ class AddEditServiceFormStep1
 
         echo <<<HTML
          <div class="box" style="width: auto; height: auto; margin: 10px">
-            <form action="index.php" method="post">
+            <form action="post.php" method="post">
             <table style="width:95%; margin: 30px;">
                 <tr>
                     <th>nazwa Serwisu(folder)</th>

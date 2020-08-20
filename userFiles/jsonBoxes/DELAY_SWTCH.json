@@ -1,0 +1,26 @@
+{
+  "boxname": "DELAY SWITCH",
+  "wallpaper": "przelacznik.jpg",
+  "text": "test",
+  "iotLib": "GPIO",
+  "form": {
+    "action": "GPIO",
+    "method": "POST",
+    "buttonClass": "button2",
+    "buttonText": "SWITCH",
+    "input": [
+      {
+        "type": "hidden",
+        "name": "gpio[]",
+        "value": "20"
+      },
+      {
+        "label": "delay time[s]",
+        "type": "number",
+        "name": "delay",
+        "value": "0"
+      }
+    ]
+  }
+}
+

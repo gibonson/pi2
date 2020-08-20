@@ -8,7 +8,7 @@ class Service
     public $boxContentPath;
     public $boxBackground;
 
-    public function __construct(string $servicesDirectory, $servisName, $serviseType)
+    public function __construct(string $servicesDirectory, $servisName)
     {
 
         $servceFullPath = $servicesDirectory . "/" . $servisName;
@@ -43,7 +43,7 @@ class Service
                 }
             }
         }
-        new ShowService($servisName, $boxName, $boxContentPath, $iotLibraries, $boxBackground, $serviseType);
+        new ShowService($servisName, $boxName, $boxContentPath, $iotLibraries, $boxBackground);
 
     }
 

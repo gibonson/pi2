@@ -7,7 +7,7 @@ session_start();
 if (isset($_GET['DHT'])) {
     new Dht22();
 } else {
-    header("Location: ../../index.php");
+    header("Location: ../../post.php");
 }
 
 
@@ -32,7 +32,7 @@ class Dht22
 
         echo $_SESSION['DHT_temp'] = $DHT_temp;
         echo $_SESSION['DHT_humid'] = $DHT_humid;
-       header("Location: ../../index.php");
+       header("Location: ../../post.php");
     }
 }
 

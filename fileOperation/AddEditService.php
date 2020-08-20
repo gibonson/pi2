@@ -9,7 +9,7 @@ class AddEditService
     public function addService($ServiceName, $boxName, $boxContent, $fileIotLibraries, $fileBackground)
     {
 
-        echo $fullPath = "/home/pi/www/userServices/" . $ServiceName;
+        echo $fullPath = "/home/pi/www/userFiles/" . $ServiceName;
         $permissionCommand = "sudo chmod -R 777 " . $fullPath;
 
 
@@ -46,7 +46,7 @@ class AddEditService
 
         exec($permissionCommand);
 
-        echo '<a href="index.php"><img src="img/RPi-Logo.png" style="height:70px;"></a>';
+        echo '<a href="post.php"><background src="background/icon-RPi-Logo.png" style="height:70px;"></a>';
 
     }
 

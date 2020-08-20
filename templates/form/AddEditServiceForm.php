@@ -16,7 +16,7 @@ class AddEditServiceForm
         }
 
         echo <<<HTML
-             <form action="index.php" method="post">
+             <form action="post.php" method="post">
                   <input type="hidden" name="ServiceName" value="$servisName"/>
                   <input type="hidden" name="boxName" value="$boxName"/>
                   <input type="hidden" name="boxContent" value="$boxContent"/>

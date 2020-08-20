@@ -1,4 +1,6 @@
 <?php
+
+namespace calendar;
 require "Event.php";
 
 

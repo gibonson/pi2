@@ -1,0 +1,1 @@
+[{"time":"13:30","command":"gpio -g write 18 1"}]

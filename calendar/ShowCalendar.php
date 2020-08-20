@@ -1,5 +1,8 @@
 <?php
 
+namespace calendar;
+
+require "Event.php";
 
 new ShowCalendar();
 
@@ -17,19 +20,24 @@ class ShowCalendar
               <th>LP</th>
               <th>date</th>
               <th>command</th>
+              <th>codeTime</th>
               <th>function</th>
               </tr>";
         $lp = 1;
         foreach ($myJSON as $key => $value) {
 
+
             $time = $value["time"];
             $command = $value["command"];
+            $event = new Event($time, $command);
+            $codeTime = $event->getCodeTime();
 
             echo <<<HTML
                  <tr>
                     <th>$lp</th>
                     <th>$time</th>
                     <th>$command</th>
+                    <th>$codeTime</th>
                     <form action="CalendarOperation.php" method="post">
                          <input type="hidden" name="time" value=$time>
                          <input type="hidden" name="command" value=$command>

@@ -1,27 +1,20 @@
-css - wiadomo
-externalLibraries - folder z bibliotekami zewnętrznymi
-form - formularze
-img - obrazki
-js - aktualnie jeden skrypt do generowania wykresów
-modules - pliki modułów użytkownika
-
-
-
 sudo pkill php
 ps ax | grep 'php -f /home/pi/www/calendar/cronPi.php'
 
 
- tail -f /var/log/apache2/error.log
+tail -f /var/log/apache2/error.log
 
 php -f /home/pi/www/calendar/cronPi.php
 
-
-
-
-
 sciągawka dla mnie:)
-
 exec('sudo python lcd/lcd_input.py dupa blada');
+
+
+.htaccess nadpisanie
+$ sudo nano /etc/apache2/apache2.conf
+edytujemy  - AllowOverride None
+
+dodanie sudo do grupy www-data
 sudo addgroup www-data
 sudo visudo and add
 #includedir /etc/sudoers.d
@@ -29,3 +22,4 @@ sudo visudo and add
 
 
 2020-07-29- poprawioni dziłanie DHT wstawienie wartości do zmiennej $_SESSION
+2020-08-11 dodano routing
