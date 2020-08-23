@@ -1,0 +1,20 @@
+{
+  "boxname": "DHT22",
+  "wallpaper": "hot.jpg",
+  "text": "dht22",
+  "iotLib": "CPU-TEMP",
+  "execute": "DHT22()",
+  "form": {
+    "action": "DHT22",
+    "method": "POST",
+    "buttonClass": "button",
+    "buttonText": "getDHT22",
+    "input": [
+      {
+        "type": "hidden",
+        "name": "run",
+        "value": "true"
+      }
+    ]
+  }
+}

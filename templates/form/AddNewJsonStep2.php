@@ -1,0 +1,35 @@
+<?php
+
+
+namespace main;
+
+class AddNewJsonStep2
+{
+    public function __construct()
+    {
+        $file = $_POST["file"];
+        $name = $_POST["name"];
+        echo <<<HTML
+         <div class="box" style="width: auto; height: auto; margin: 10px">
+            <form action="post.php" method="post">
+            <table style="width:95%; margin: 30px;">
+                <tr>
+                    <th>nazwa Serwisu(folder)</th>
+                    <th><input type="text" style="width:95%" name="ServiceName" value="$name"/></th>
+                </tr>
+                <tr>
+                    <th>zawartosc formularza</th>
+                    <th><textarea rows="20" cols="75" name="boxContent"style="margin: 30px">$file</textarea></th>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                  <input type="hidden" name="form" value="addFormStep2"/>
+                  <button type="submit" class="small_button">Save</button>
+                  </th>
+                  </tr>
+                  </table>
+             </form>
+         </div>
+HTML;
+    }
+}

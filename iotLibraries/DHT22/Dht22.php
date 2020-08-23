@@ -4,10 +4,8 @@ namespace main;
 session_start();
 
 
-if (isset($_GET['DHT'])) {
+if (isset($_POST["run"]) == "true") {
     new Dht22();
-} else {
-    header("Location: ../../post.php");
 }
 
 
@@ -15,9 +13,7 @@ class Dht22
 {
     public function __construct()
     {
-        echo "test";
-        $cmd = "sudo python iotLibraries/DHT22/AdafruitDHT.py 22 4";
-        $cmd = "sudo python AdafruitDHT.py 22 4";
+        $cmd = "sudo python /home/pi/www/iotLibraries/DHT22/AdafruitDHT.py 22 4";
         echo $output = shell_exec($cmd);
         $DHT = explode(" ", $output);
 
@@ -32,7 +28,7 @@ class Dht22
 
         echo $_SESSION['DHT_temp'] = $DHT_temp;
         echo $_SESSION['DHT_humid'] = $DHT_humid;
-       header("Location: ../../post.php");
+        header("Location: index");
     }
 }
 

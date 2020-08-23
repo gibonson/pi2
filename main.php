@@ -4,122 +4,75 @@ namespace main;
 
 include "config.php";
 
-
 session_start();
 require "fileOperation/FileScan.php";
 require "fileOperation/FileSearch.php";
-require "fileOperation/Service.php";
-require "fileOperation/AddEditService.php";
 require "templates/ShowService.php";
-require "templates/form/AddEditServiceForm.php";
-require "templates/form/AddEditServiceFormStep1.php";
-require "templates/form/AddEditServiceFormStep2.php";
+require "templates/form/AddNewJson.php";
+require "templates/form/AddNewJsonStep2.php";
 require "dataBase/DataBaseTest.php";
 require "fileOperation/JsonToForm.php";
-
-$iotLibrariesDirectory = __DIR__ . '/iotLibraries';
+require "fileOperation/FileToMenuBar.php";
+require "fileOperation/AddEditJsonToForm.php";
 
 
 ?>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>SmartPI</title>
-        <link rel="stylesheet" type="text/css" href="webResources/css/style.css">
-        <link rel="stylesheet" type="text/css" href="webResources/css/style_button.css">
-        <link rel="stylesheet" type="text/css" href="webResources/css/style_link.css">
-        <link rel="stylesheet" type="text/css" href="webResources/css/nav.css">
-        <link rel="stylesheet" type="text/css" href="webResources/css/style_status_bar.css">
-
-        <!-- jQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Semi Circle Progress Bar JS -->
-        <script src="webResources/js/script.js"></script>
-    </head>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SmartPI</title>
+    <link rel="stylesheet" type="text/css" href="webResources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="webResources/css/style_button.css">
+    <link rel="stylesheet" type="text/css" href="webResources/css/style_link.css">
+    <link rel="stylesheet" type="text/css" href="webResources/css/nav.css">
+</head>
 
 <body>
 <header class="header">
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index"><img src="webResources/icon/icon-home.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);"></a></li>
-                <li><a href="#"><?php new DataBaseTest() ?></a></li>
-                <li><a href="777"><img src="webResources/icon/icon-777.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""></a></li>
+    <!--        <ul>-->
+    <!--            <li><a href="#">Strona główna</a></li>-->
+    <!--            <li><a href="#">Newsy</a>-->
+    <!--                <ul>-->
+    <!--                    <li><a href="#">Internet</a></li>-->
+    <!--                    <li><a href="#">Sprzęt</a>-->
+    <!--                        <ul>-->
+    <!--                            <li><a href="#">Komputery</a></li>-->
+    <!--                            <li><a href="#">Tablety</a></li>-->
+    <!--                            <li><a href="#">Telefony</a></li>-->
+    <!--                        </ul>-->
+    <!--                    </li>-->
+    <!--                    <li><a href="#">Oprogramowanie</a></li>-->
+    <!--                    <li><a href="#">Wydarzenia</a></li>-->
+    <!--                </ul>-->
+    <!--            </li>-->
+    <!--        </ul>-->
+    <ul>
+        <?php
 
-                <li class='sub-menu'><a href="#"><img src="webResources/icon/icon-add.png"
-                                                      style="width:40px;height:40px;"></a>
-                    <ul>
-                        <?php
-                        $iotDirList = new FileScan($iotLibrariesDirectory);
-                        foreach ($iotDirList->getFileList() as $iotLib) {
-                            echo '<li>';
-                            new AddEditServiceForm("NewService", "Newox.php", "iot-template", $iotLib, "", $iotLib);
-                            echo '</li>';
-                        }
-                        ?>
-                    </ul>
-                </li>
-
-
-                <li><a href="calendar/ShowCalendar.php"><img src="webResources/icon/icon-calendar.png" alt="ok"
-                                                             style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);"><i class='fa fa-angle-down'></i></a>
-                    <ul>
-                        <li><a href="#">Category One</a></li>
-                        <li><a href="#">Category Two</a></li>
-                        <li><a href="#">Category Three</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="index.php"><img src="webResources/icon/ison-seting.png"
-                                             style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""></a></li>
-
-                <li><a href="index.php"><img src="webResources/icon/icon-user.png" style="width:40px;height:40px;   -webkit-filter: invert(1);
-   filter: invert(1);""></a></li>
-
-
-                <li class='sub-menu'><a href="systemServices/calendar/calendarTest.php"><img
-                                src="webResources/icon/icon-RPi-Logo.png"
-                                style="height:40px;">
-                        <i class='fa fa-angle-down'></i></a>
-                    <ul>
-                        <li><a href="#">OS: <?= PHP_OS ?></a></li>
-                        <li><a href="#">PHP version: <?= PHP_VERSION ?></a></li>
-                        <li><a href="#">mainDir: <?= __DIR__ ?></a></li>
-                        <li><a href="#">User Services: <?= __DIR__ ?></a></li>
-                        <li><a href="#">User Services: <?= "" ?></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        $menuBar = new FileScan("menuBar");
+        foreach (FileScan::getFileList() as $menu) {
+            include "menuBar" . "/" . $menu;
+        }
+        ?>
+    </ul>
 </header>
 
 <section>
     <?php
-
-//    $userServicesList = new FileScan(DIR_BOXES);
-//    foreach ($userServicesList->getFileList() as $servisName) {
-//        if (strpos($servisName, "old")) {
-//            continue;
-//        }
-//        $serviseType = "user";
-//        new Service(DIR_BOXES, $servisName);
-//    }
-
-    $jsonBoxes = new FileScan("userFiles/jsonBoxes");
-    foreach ($jsonBoxes->getFileList() as $servisName) {
-
-        new JsonToForm($servisName);
-
+    if ($_POST["AddNewJsonBox"] == "true") {
+        new AddNewJsonStep2();
     }
 
 
+    $jsonBoxes = new FileScan("userFiles/jsonBoxes");
+    foreach ($jsonBoxes->getFileList() as $servisName) {
+        new JsonToForm($servisName);
+    }
     ?>
 </section>
-    <?php
+<?php
 require "templates/footer.php";
+?>
+</body>
+</html>

@@ -1,7 +1,8 @@
 <?php
 
-new Chmod777();
+namespace main;
 
+new Chmod777();
 
 class Chmod777
 {
@@ -13,5 +14,3 @@ class Chmod777
         header("Location: index");
     }
 }
-
-

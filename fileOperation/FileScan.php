@@ -1,4 +1,5 @@
 <?php
+
 namespace main;
 
 class FileScan
@@ -14,6 +15,16 @@ class FileScan
         if (($key = array_search('..', $fileList)) !== false) {
             unset($fileList[$key]);
         }
+        self::$fileList = $fileList;
+    }
+
+
+    /**
+     * @param array|false $fileList
+     */
+    public
+    static function setFileList($fileList): void
+    {
         self::$fileList = $fileList;
     }
 

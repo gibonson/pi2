@@ -7,7 +7,7 @@
     "action": "GPIO",
     "method": "POST",
     "buttonClass": "button2",
-    "buttonText": "SWITCH",
+    "buttonText": "DELAY GPIO20",
     "input": [
       {
         "type": "hidden",
