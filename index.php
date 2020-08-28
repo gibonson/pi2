@@ -22,6 +22,15 @@ $router->get("GPIO", DIR_IOTLIB . "/GPIO/GPIO.php");
 $router->get("AddNewJsonStep2", DIR_TEMPLATES . "/form/AddNewJsonStep2.php");
 
 
-$router->get("777", "/home/pi/www/fileOperation/Chmod777.php");
+$router->get("showCalendar", __DIR__ . "/calendar/ShowCalendar.php");
+$router->get("CalendarOperation", __DIR__ . "/calendar/CalendarOperation.php");
+$router->get("StartCalendar", __DIR__ . "/calendar/StartCalendar.php");
+$router->get("StopCalendar", __DIR__ . "/calendar/StopCalendar.php");
+
+
+
+$router->get("777", __DIR__ . "/fileOperation/Chmod777.php");
+$router->get("DatabaseTest", __DIR__ . "/dataBase/DataBaseTest.php");
+$router->get("AddData", __DIR__ . "/dataBase/AddData.php");
 
 require "templates/404.php";

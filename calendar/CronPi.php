@@ -11,7 +11,7 @@ class CronPi{
 
     public function __construct()
     {
-        $calenderFile = file_get_contents("calendar.json", "r+") or die("Unable to open file!");
+        $calenderFile = file_get_contents("/home/pi/www/userFiles/calendar.json", "r+") or die("Unable to open file!");
         $calenderJson = json_decode($calenderFile, true);
 
 
@@ -37,7 +37,7 @@ class CronPi{
                 if ($event->getCodeTime() == $currentTime) {
                     echo $event->getCodeTime() . "jest rowne dacie" . $currentTime . "\n";
                     echo $command = $event->getCommand() . "\n";
-                    //shell_exec($command);
+                    shell_exec($command);
                 }
             }
             sleep(2);

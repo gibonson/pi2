@@ -4,14 +4,12 @@ namespace calendar;
 
 require "Event.php";
 
-new ShowCalendar();
-
 class ShowCalendar
 {
 
     public function __construct()
     {
-        $myfile = file_get_contents("calendar.json");
+        $myfile = file_get_contents("userFiles/calendar.json");
 
         $myJSON = json_decode($myfile, true);
 
@@ -38,9 +36,9 @@ class ShowCalendar
                     <th>$time</th>
                     <th>$command</th>
                     <th>$codeTime</th>
-                    <form action="CalendarOperation.php" method="post">
-                         <input type="hidden" name="time" value=$time>
-                         <input type="hidden" name="command" value=$command>
+                    <form action="CalendarOperation" method="post">
+                         <input type="hidden" name="time" value="$time">
+                         <input type="hidden" name="command" value="$command">
                          <input type="hidden" name="operation" value=remove>
                          <th><input type="submit" value="remove"></th>
                     </form>
@@ -48,18 +46,30 @@ class ShowCalendar
                  HTML;
             $lp++;
         }
+
+        $calendarEventJson = file_get_contents("userFiles/calendarEvent.json");
+        $calendarEventJsonList = json_decode($calendarEventJson, true);
+
         echo <<<HTML
                 <tr>
-                    <form action="CalendarOperation.php" method="post">
-                    <th><?= $lp ?></th>
-                    <th><input type="time" name="time" value="13:30"></th>
-                    <th><input type="command" name="command" value="polecenie"></th>
-                    <input type="hidden" name="operation" value=add>
+                    <form action="CalendarOperation" method="post">
+                    <th>$lp</th>
+                    <th><input type="time" name="time" value="00:00"></th>
+                    <th>
+                    <select name="command">
+        HTML;
+        foreach ($calendarEventJsonList as $description => $event) {
+            echo " <option value = \"$event\" > $description</option >";
+        }
+        echo <<<HTML
+                    </select>
+                    </th>
+                    <input type="hidden" name="operation" value="add">
                     <th><input type="submit" value="Add"></th>
                     </form>
                 </tr>
             </table>
-HTML;
+        HTML;
 
     }
 }

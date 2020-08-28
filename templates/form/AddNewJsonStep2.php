@@ -11,7 +11,7 @@ class AddNewJsonStep2
         $name = $_POST["name"];
         echo <<<HTML
          <div class="box" style="width: auto; height: auto; margin: 10px">
-            <form action="post.php" method="post">
+            <form action="index" method="post">
             <table style="width:95%; margin: 30px;">
                 <tr>
                     <th>nazwa Serwisu(folder)</th>
@@ -23,8 +23,8 @@ class AddNewJsonStep2
                 </tr>
                 <tr>
                   <th colspan="2">
-                  <input type="hidden" name="form" value="addFormStep2"/>
-                  <button type="submit" class="small_button">Save</button>
+                  <button type="submit" name="indexSwitch"  value="AddNewJsonBox2" class="small_button">Save</button>
+                  <button type="submit" name="indexSwitch"  value="" class="small_button">Exit</button>
                   </th>
                   </tr>
                   </table>

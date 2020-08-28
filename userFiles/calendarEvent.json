@@ -1,0 +1,10 @@
+{
+  "gpio 13 On": "gpio -g write 13 1",
+  "gpio 13 Off": "gpio -g write 13 0",
+  "gpio 16 On": "gpio -g write 16 1",
+  "gpio 16 Off": "gpio -g write 16 0",
+  "gpio 20 On": "gpio -g write 20 1",
+  "gpio 20 Off": "gpio -g write 20 0",
+  "gpio 21 On": "gpio -g write 21 1",
+  "gpio 21 Off": "gpio -g write 21 0"
+}

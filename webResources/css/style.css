@@ -16,6 +16,7 @@ header {
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%);
     z-index: 99;
+    text-align: center;
 }
 
 .header_title {

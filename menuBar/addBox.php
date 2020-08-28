@@ -10,7 +10,6 @@ echo "<ul>";
 foreach ($iotDirList->getFileList() as $iotLib) {
     echo '<li>';
     $addNewBox = new AddEditJsonToForm("add", $iotLib);
-//    echo $iotLib;
     echo '</li>';
 }
 echo "</ul>";

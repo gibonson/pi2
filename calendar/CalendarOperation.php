@@ -15,6 +15,7 @@ switch ($_POST["operation"]) {
         break;
 }
 
+
 class CalendarOperation
 {
     public static $EventList = [];
@@ -22,19 +23,27 @@ class CalendarOperation
 
     public function addEvent($time, $command)
     {
+
         $event = new Event($time, $command);
 
-        $myfile = file_get_contents("calendar.json");
+        $myfile = file_get_contents("userFiles/calendar.json");
         $myJSON = json_decode($myfile, true);
 
         array_push($myJSON, $event);
 
         $myfile = json_encode($myJSON);
-        $file = fopen("calendar.json", "w+") or die("Unable to open file!");
+        $file = fopen("userFiles/calendar.json", "w+") or die("Unable to open file!");
         fputs($file, $myfile);
         fclose($file);
 
-        header("Location: ../calendar/ShowCalendar.php");
+        header("index");
+        echo "
+        <form name='fr' action='index' method='post'>
+            <input type='hidden' name='indexSwitch' value='showCalendar'>
+        </form>
+        <script type='text/javascript'>
+        document.fr.submit();
+        </script>";
     }
 
     public function editEvent()
@@ -44,8 +53,11 @@ class CalendarOperation
 
     public function removeEvent($time, $command)
     {
+        echo $time."<br>";
+        echo $command."<br>";
 
-        $myfile = file_get_contents("calendar.json", "r+") or die("Unable to open file!");
+
+        $myfile = file_get_contents("userFiles/calendar.json", "r+") or die("Unable to open file!");
         $myJSON = json_decode($myfile, true);
 
         $newJSON = [];
@@ -64,13 +76,19 @@ class CalendarOperation
         print_r($newJSON);
 
         $newJSON = json_encode($newJSON);
-        $file = fopen("calendar.json", "w+") or die("Unable to open file!");
+        $file = fopen("userFiles/calendar.json", "w+") or die("Unable to open file!");
         fputs($file, $newJSON);
         fclose($file);
 
         echo "usun";
-        header("Location: ../calendar/ShowCalendar.php");
-
+//
+//        echo "
+//        <form name='fr' action='index' method='post'>
+//            <input type='hidden' name='indexSwitch' value='showCalendar'>
+//        </form>
+//        <script type='text/javascript'>
+//        document.fr.submit();
+//        </script>";
     }
 
     public function saveToJson()

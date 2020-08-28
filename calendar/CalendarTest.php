@@ -1,14 +1,21 @@
 <?php
 
 
-echo '<li><a href="#">' . "<img src=\"webResources/icon/icon-add.png\" style=\"width:40px;height:40px;\">" . '</a></li>';
 
+
+$command = "ps aux |grep -c 'php -f /home/pi/www/calendar/CronPi.php1'";
+$output = shell_exec($command);
+if ($output >= 2) {
+    echo "skrypt uruchomiony";
+} else {
+    echo "blad uruchomienia";
+}
 
 
 //
 //$command = "pgrep php";
 //$cronRun = "php -f /home/pi/www/calendar-old/CronPi.php > /dev/null 2>/dev/null &";
-//echo $output = shell_exec($command);
+//echo
 //
 //echo "PID skryptu, który ma w nazwie PHP: " . $output . "<br>";
 //
@@ -25,7 +32,6 @@ echo '<li><a href="#">' . "<img src=\"webResources/icon/icon-add.png\" style=\"w
 //} else {
 //    echo "skrypt był już uruchomiony";
 //}
-
 
 
 /*    <form action="userFiles/<?= $module->getModuleName() ?>/script/<?= $module->getScriptName() ?>">*/

@@ -1,6 +1,7 @@
 <?php
 
 namespace main;
+use calendar\ShowCalendar;
 
 include "config.php";
 
@@ -12,8 +13,8 @@ require "templates/form/AddNewJson.php";
 require "templates/form/AddNewJsonStep2.php";
 require "dataBase/DataBaseTest.php";
 require "fileOperation/JsonToForm.php";
-require "fileOperation/FileToMenuBar.php";
 require "fileOperation/AddEditJsonToForm.php";
+require "calendar/ShowCalendar.php";
 
 
 ?>
@@ -29,24 +30,6 @@ require "fileOperation/AddEditJsonToForm.php";
 
 <body>
 <header class="header">
-
-    <!--        <ul>-->
-    <!--            <li><a href="#">Strona główna</a></li>-->
-    <!--            <li><a href="#">Newsy</a>-->
-    <!--                <ul>-->
-    <!--                    <li><a href="#">Internet</a></li>-->
-    <!--                    <li><a href="#">Sprzęt</a>-->
-    <!--                        <ul>-->
-    <!--                            <li><a href="#">Komputery</a></li>-->
-    <!--                            <li><a href="#">Tablety</a></li>-->
-    <!--                            <li><a href="#">Telefony</a></li>-->
-    <!--                        </ul>-->
-    <!--                    </li>-->
-    <!--                    <li><a href="#">Oprogramowanie</a></li>-->
-    <!--                    <li><a href="#">Wydarzenia</a></li>-->
-    <!--                </ul>-->
-    <!--            </li>-->
-    <!--        </ul>-->
     <ul>
         <?php
 
@@ -60,15 +43,26 @@ require "fileOperation/AddEditJsonToForm.php";
 
 <section>
     <?php
-    if ($_POST["AddNewJsonBox"] == "true") {
-        new AddNewJsonStep2();
+    switch ($_POST["indexSwitch"]) {
+        case "AddNewJsonBox":
+            new AddNewJsonStep2();
+            break;
+        case "AddNewJsonBox2":
+            echo "form2";
+            break;
+        case "showCalendar":
+            new ShowCalendar();
+            break;
+        default:
+            $jsonBoxes = new FileScan("userFiles/jsonBoxes");
+            foreach ($jsonBoxes->getFileList() as $servisName) {
+                new JsonToForm($servisName);
+            }
+            break;
+
     }
 
 
-    $jsonBoxes = new FileScan("userFiles/jsonBoxes");
-    foreach ($jsonBoxes->getFileList() as $servisName) {
-        new JsonToForm($servisName);
-    }
     ?>
 </section>
 <?php

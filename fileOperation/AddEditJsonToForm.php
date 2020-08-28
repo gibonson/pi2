@@ -10,9 +10,9 @@ class AddEditJsonToForm
     public function __construct(string $addOrEdit, string $name)
     {
         if ($addOrEdit == "edit") {
-            $file = file_get_contents("userFiles/jsonBoxes/" . $name . ".json", "r");
-            self::editJson();
-            Json($name, $file);
+
+            $file = fopen("userFiles/jsonBoxes/" . $name, "r");
+            self::editJson($name, $file);
         }
         if ($addOrEdit == "add") {
             $file = file_get_contents("iotLibraries/" . $name . "/" . $name . ".json", "r");
@@ -29,8 +29,7 @@ class AddEditJsonToForm
 
     public function editJson($name, $file)
     {
-
-        echo $file;
+        new AddNewJson($name, $file);
     }
 
 

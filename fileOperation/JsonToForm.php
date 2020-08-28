@@ -35,7 +35,7 @@ class JsonToForm
         }
 
 
-        $servisName = "test";
+        $servisName = $jsonFileName;
         $boxContent = "";
 
         if (isset($box["form"])) {

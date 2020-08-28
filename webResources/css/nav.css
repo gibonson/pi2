@@ -93,7 +93,7 @@ ul > li > a {
 
 ul > li > a:hover,
 ul > li:hover > a {
-    color: #de5f44;
+    color: #00de22;
     text-decoration: underline;
 }
 
@@ -137,5 +137,5 @@ ul > li ul li a:hover,
 ul > li ul li:hover > a {
     text-decoration: none;
     color: #000000;
-    background-color: #f26c4f;
+    background-color: #1bf200;
 }

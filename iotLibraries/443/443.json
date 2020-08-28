@@ -1,3 +1,40 @@
-443 json
-
-            
+{
+  "boxname": "443",
+  "wallpaper": "modul433mhz.jpg",
+  "text": "test",
+  "iotLib": "443",
+  "form": {
+    "action": "443",
+    "method": "POST",
+    "buttonClass": "button",
+    "buttonText": "SEND SIGNAL",
+    "selectId": "socket",
+    "selectName": "socket",
+    "select": [
+      {
+        "optionText": "4433 - ON",
+        "value": "4433"
+      },
+      {
+        "optionText": "4436 - OFF",
+        "value": "4436"
+      },
+      {
+        "optionText": "5201 - ON",
+        "value": "5201"
+      },
+      {
+        "optionText": "5204 - OFF",
+        "value": "5204"
+      },
+      {
+        "optionText": "5393 - ON",
+        "value": "5393"
+      },
+      {
+        "optionText": "5396 - OFF",
+        "value": "5396"
+      }
+    ]
+  }
+}

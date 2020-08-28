@@ -10,8 +10,11 @@ class showService
         <div class="box">
             <img class="back" src="userFiles/img/<?= $boxBackground ?>" alt=no back">
             <div class="text">
-                <div class="title"><?= $boxName?></div>
+                <div class="title"><?= $boxName ?></div>
                 <?= $boxContent ?>
+                <?php
+//                new AddEditJsonToForm("edit", $servisName);
+                ?>
             </div>
         </div>
         <?php
