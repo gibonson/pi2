@@ -28,9 +28,12 @@ $router->get("StartCalendar", __DIR__ . "/calendar/StartCalendar.php");
 $router->get("StopCalendar", __DIR__ . "/calendar/StopCalendar.php");
 
 
-
 $router->get("777", __DIR__ . "/fileOperation/Chmod777.php");
 $router->get("DatabaseTest", __DIR__ . "/dataBase/DataBaseTest.php");
 $router->get("AddData", __DIR__ . "/dataBase/AddData.php");
+
+
+$router->get("IotDeviceList", __DIR__ . "/dataBase/IotDeviceList.php");
+
 
 require "templates/404.php";

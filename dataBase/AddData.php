@@ -3,14 +3,12 @@
 
 namespace main;
 
-include "config.php";
+include "/home/pi/www/config.php";
 
-
-new AddData("czujnik3","data3");
 
 class AddData
 {
-    public function __construct(string $sensorId, string $data)
+    public function __construct(string $id_Device, string $value)
     {
         $conn = mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSOWD, DATABASE_NAME);
 
@@ -18,8 +16,12 @@ class AddData
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO TestTable (TestTableSensor, TestTableData)
-VALUES ('$sensorId', '$data')";
+
+//        $time = date('Y-m-d H:i:s');
+        $time = time();
+
+        $sql = "INSERT INTO IOT_measurement (id_Device, time ,value)
+VALUES ('$id_Device', '$time' , '$value')";
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {

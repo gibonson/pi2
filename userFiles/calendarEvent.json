@@ -6,5 +6,6 @@
   "gpio 20 On": "gpio -g write 20 1",
   "gpio 20 Off": "gpio -g write 20 0",
   "gpio 21 On": "gpio -g write 21 1",
-  "gpio 21 Off": "gpio -g write 21 0"
+  "gpio 21 Off": "gpio -g write 21 0",
+  "GET DHT22": "sudo php -f /home/pi/www/iotLibraries/DHT22/Insert.php"
 }

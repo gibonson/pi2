@@ -2,8 +2,13 @@
 
 namespace main;
 
+
 class CpuTemp
 {
+
+    public static $ID_DEVICE = 1;
+    public static $DEVICE_DESCRIPTION = "CPUTEMP";
+
     public function getTemp(): string
     {
         $CPU_temp = shell_exec('vcgencmd measure_temp');

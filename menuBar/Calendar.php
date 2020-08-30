@@ -6,11 +6,11 @@ $output = exec($command) - 1;
 if ($output == "2") {
     $icon = "webResources/icon/icon-calendar.png";
     $startStopCalendar = '<form action="StopCalendar" method="post">
-            <a type="submit" onclick="this.closest(\'form\').submit();return false;" style="cursor:pointer">Stop service</a>';
+            <a type="submit" onclick="this.closest(\'form\').submit();return false;" style="cursor:pointer">Stop service</a></form>';
 } else {
     $icon = "webResources/icon/icon-calendar-error.png";
     $startStopCalendar = '<form action="StartCalendar" method="post">
-            <a type="submit" onclick="this.closest(\'form\').submit();return false;" style="cursor:pointer">Start service</a>';
+            <a type="submit" onclick="this.closest(\'form\').submit();return false;" style="cursor:pointer">Start service</a></form>';
 }
 ?>
 

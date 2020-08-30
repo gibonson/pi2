@@ -1,6 +1,7 @@
 <?php
 
 namespace main;
+
 use calendar\ShowCalendar;
 
 include "config.php";
@@ -15,6 +16,8 @@ require "dataBase/DataBaseTest.php";
 require "fileOperation/JsonToForm.php";
 require "fileOperation/AddEditJsonToForm.php";
 require "calendar/ShowCalendar.php";
+
+require "dataBase/IotDeviceList.php"
 
 
 ?>
@@ -52,6 +55,10 @@ require "calendar/ShowCalendar.php";
             break;
         case "showCalendar":
             new ShowCalendar();
+            break;
+        case "showIotDeviceList":
+            $list = new IotDeviceList();
+            $list->viewDevice();
             break;
         default:
             $jsonBoxes = new FileScan("userFiles/jsonBoxes");

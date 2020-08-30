@@ -40,7 +40,7 @@ class CronPi{
                     shell_exec($command);
                 }
             }
-            sleep(2);
+            sleep(60);
         }
     }
 }
