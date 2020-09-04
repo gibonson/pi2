@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 $command = "ps aux |grep -c 'php -f /home/pi/www/calendar/CronPi.php1'";
 $output = shell_exec($command);
 if ($output >= 2) {

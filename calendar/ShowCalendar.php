@@ -17,8 +17,9 @@ class ShowCalendar
         echo "<tr>
               <th>LP</th>
               <th>date</th>
-              <th>command</th>
               <th>codeTime</th>
+              <th>periodTime</th>
+              <th>command</th>
               <th>function</th>
               </tr>";
         $lp = 1;
@@ -27,15 +28,18 @@ class ShowCalendar
 
             $time = $value["time"];
             $command = $value["command"];
-            $event = new Event($time, $command);
+            $periodTime = $value["periodTime"];
+
+            $event = new Event($time, $command, $periodTime);
             $codeTime = $event->getCodeTime();
 
             echo <<<HTML
                  <tr>
                     <th>$lp</th>
                     <th>$time</th>
-                    <th>$command</th>
                     <th>$codeTime</th>
+                    <th>$periodTime</th>
+                    <th>$command</th>
                     <form action="CalendarOperation" method="post">
                          <input type="hidden" name="time" value="$time">
                          <input type="hidden" name="command" value="$command">
@@ -55,6 +59,8 @@ class ShowCalendar
                     <form action="CalendarOperation" method="post">
                     <th>$lp</th>
                     <th><input type="time" name="time" value="00:00"></th>
+                    <th></th>
+                    <th><input type="number" name="peroidime" value="0"></th>
                     <th>
                     <select name="command">
         HTML;
@@ -69,7 +75,10 @@ class ShowCalendar
                     </form>
                 </tr>
             </table>
+
         HTML;
 
     }
 }
+
+?>

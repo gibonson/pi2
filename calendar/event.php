@@ -6,15 +6,18 @@ class Event
 {
     public $time;
     public $command;
+    public $periodTime;
 
     /**
      * Event constructor.
      * @param $time
+     * @param $periodTime
      * @param $command
      */
-    public function __construct($time, $command)
+    public function __construct($time, $command, $periodTime = null)
     {
         $this->time = $time;
+        $this->periodTime = $periodTime;
         $this->command = $command;
 
     }

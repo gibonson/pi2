@@ -22,7 +22,7 @@ if ($output == "2") {
                style="width:40px;height:40px; -webkit-filter: invert(1);">
     </form>
     <ul>
-        <?= $startStopCalendar ?>
+        <li><?= $startStopCalendar ?></li>
 
     </ul>
 </li>
