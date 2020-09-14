@@ -6,7 +6,7 @@ namespace main;
 require "templates/ButtonStyle.php";
 require "iotLibraries/CpuTemp/CpuTemp.php";
 require "iotLibraries/DHT22/Dht22.php";
-require "templates/ChartTemplate.php";
+require "templates/ChartProgress.php";
 
 
 class JsonToForm
@@ -75,11 +75,11 @@ class JsonToForm
         if (isset($box["execute"])) {
             if ($box["execute"] == "CpuTemp()") {
                 $cpuTemp = new CpuTemp();
-                $template = new ChartTemplate();
+                $template = new ChartProgress();
                 $boxContent = $boxContent . $template->getTemplate("temperatura", "&deg", $cpuTemp->getTemp());
             }
             if ($box["execute"] == "DHT22()") {
-                $template = new ChartTemplate();
+                $template = new ChartProgress();
                 $boxContent = $boxContent . $template->getTemplate("temperatura", "&deg", $_SESSION['DHT_temp']);
                 $boxContent = $boxContent . $template->getTemplate("Wilgotnosc", "%", $_SESSION['DHT_humid']);
             }

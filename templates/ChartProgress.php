@@ -2,7 +2,7 @@
 
 namespace main;
 
-class ChartTemplate
+class ChartProgress
 {
     public function getTemplate($nazwa, $jednostka, $value)
     {

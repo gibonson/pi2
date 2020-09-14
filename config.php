@@ -5,4 +5,4 @@ define('DATABASE_PASSOWD', 'user');
 define('DATABASE_NAME', 'smartpi');
 define('DIR_TEMPLATES', '/home/pi/www/templates');
 define('DIR_IOTLIB', '/home/pi/www/iotLibraries');
-define('DIR_BOXES', '/home/pi/www/userFiles/boxes');
+define('DIR_BOXES', '/home/pi/www/userFiles/jsonBoxes');

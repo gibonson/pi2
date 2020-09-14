@@ -7,11 +7,11 @@ class AddNewJsonStep2
 {
     public function __construct()
     {
-        $file = $_POST["file"];
+        $file = file_get_contents($_POST["file"], "r");
         $name = $_POST["name"];
         echo <<<HTML
          <div class="box" style="width: auto; height: auto; margin: 10px">
-            <form action="index" method="post">
+            <form action="SaveJson" method="post">
             <table style="width:95%; margin: 30px;">
                 <tr>
                     <th>nazwa Serwisu(folder)</th>

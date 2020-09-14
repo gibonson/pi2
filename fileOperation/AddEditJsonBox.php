@@ -4,22 +4,20 @@
 namespace main;
 
 
-class AddEditJsonToForm
+class AddEditJsonBox
 {
 
     public function __construct(string $addOrEdit, string $name)
     {
         if ($addOrEdit == "edit") {
 
-            $file = fopen("userFiles/jsonBoxes/" . $name, "r");
+            $file = "userFiles/jsonBoxes/" . $name;
             self::editJson($name, $file);
         }
         if ($addOrEdit == "add") {
-            $file = file_get_contents("iotLibraries/" . $name . "/" . $name . ".json", "r");
+            $file = "iotLibraries/" . $name . "/" . $name . ".json";
             self::addNewJson($name, $file);
         }
-
-
     }
 
     public function addNewJson($name, $file)
@@ -29,7 +27,8 @@ class AddEditJsonToForm
 
     public function editJson($name, $file)
     {
-        new AddNewJson($name, $file);
+        $edit = true;
+        new AddNewJson($name, $file, $edit);
     }
 
 

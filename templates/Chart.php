@@ -16,7 +16,9 @@ class Chart
 
         var options = {
             backgroundColor: 'white',
+            fontSize: 9,
             title: 'temperatura',
+            chartArea: {'width': '90%', 'height': '70%'},
             curveType: 'function',
             legend: {position: 'bottom'}
         };

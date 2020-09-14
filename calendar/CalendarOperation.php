@@ -8,7 +8,7 @@ $callendarOperation = new CalendarOperation();
 
 switch ($_POST["operation"]) {
     case "add":
-        $callendarOperation->addEvent($_POST["time"], $_POST["command"]);
+        $callendarOperation->addEvent($_POST["time"], $_POST["command"], $_POST["periodTime"]);
         break;
     case "remove":
         $callendarOperation->removeEvent($_POST["time"], $_POST["command"]);
@@ -21,10 +21,13 @@ class CalendarOperation
     public static $EventList = [];
 
 
-    public function addEvent($time, $command)
+    public function addEvent($time, $command, $periodTime = null)
     {
 
-        $event = new Event($time, $command);
+        echo $time . $command . $periodTime;
+
+
+        $event = new Event($time, $command, $periodTime);
 
         $myfile = file_get_contents("userFiles/calendar.json");
         $myJSON = json_decode($myfile, true);
@@ -37,6 +40,7 @@ class CalendarOperation
         fclose($file);
 
         header("index");
+
         echo "
         <form name='fr' action='index' method='post'>
             <input type='hidden' name='indexSwitch' value='showCalendar'>
@@ -53,8 +57,8 @@ class CalendarOperation
 
     public function removeEvent($time, $command)
     {
-        echo $time."<br>";
-        echo $command."<br>";
+        echo $time . "<br>";
+        echo $command . "<br>";
 
 
         $myfile = file_get_contents("userFiles/calendar.json", "r+") or die("Unable to open file!");
@@ -80,15 +84,13 @@ class CalendarOperation
         fputs($file, $newJSON);
         fclose($file);
 
-        echo "usun";
-//
-//        echo "
-//        <form name='fr' action='index' method='post'>
-//            <input type='hidden' name='indexSwitch' value='showCalendar'>
-//        </form>
-//        <script type='text/javascript'>
-//        document.fr.submit();
-//        </script>";
+        echo "
+        <form name='toIndex' action='index' method='post'>
+            <input type='hidden' name='indexSwitch' value='showCalendar'>
+        </form>
+        <script type='text/javascript'>
+        document.toIndex.submit();
+        </script>";
     }
 
     public function saveToJson()

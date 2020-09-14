@@ -60,7 +60,7 @@ class ShowCalendar
                     <th>$lp</th>
                     <th><input type="time" name="time" value="00:00"></th>
                     <th></th>
-                    <th><input type="number" name="peroidime" value="0"></th>
+                    <th><input type="number" name="periodTime" value="0"></th>
                     <th>
                     <select name="command">
         HTML;

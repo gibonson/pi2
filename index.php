@@ -13,13 +13,14 @@ $router->get("index", __DIR__ . "/main.php");
 
 
 $router->get("lcd", DIR_IOTLIB . "/LCD/lcd.php");
-$router->get("443", DIR_IOTLIB . "/443/443.php");
+$router->get("433", DIR_IOTLIB . "/433/433.php");
 $router->get("DHT22", DIR_IOTLIB . "/DHT22/Dht22.php");
 $router->get("camera", DIR_IOTLIB . "/FOTO-RPI/camera.php");
 $router->get("GPIO", DIR_IOTLIB . "/GPIO/GPIO.php");
 
 
 $router->get("AddNewJsonStep2", DIR_TEMPLATES . "/form/AddNewJsonStep2.php");
+$router->get("SaveJson", __DIR__."/fileOperation/SaveJson.php");
 
 
 $router->get("showCalendar", __DIR__ . "/calendar/ShowCalendar.php");

@@ -2,7 +2,7 @@
 
 $code = $_POST['socket'];
 
-$command = "sudo ./iotLibraries/443/codesend ".$code;
+$command = "sudo ./iotLibraries/433/codesend ".$code;
 echo $command;
 exec($command);
 

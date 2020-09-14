@@ -13,7 +13,7 @@ class showService
                 <div class="title"><?= $boxName ?></div>
                 <?= $boxContent ?>
                 <?php
-//                new AddEditJsonToForm("edit", $servisName);
+                new AddEditJsonBox("edit", $servisName);
                 ?>
             </div>
         </div>
