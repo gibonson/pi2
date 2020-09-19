@@ -12,6 +12,11 @@
   {
     "time": "00:00",
     "command": "sudo php -f \/home\/pi\/www\/iotLibraries\/DHT22\/Insert.php",
-    "periodTime": 10
+    "periodTime": 30
+  },
+  {
+    "time": "00:02",
+    "command": "sudo php -f \/home\/pi\/www\/iotLibraries\/CpuTemp\/Insert.php",
+    "periodTime": "30"
   }
 ]

@@ -1,0 +1,7 @@
+{
+  "boxname": "cpu",
+  "wallpaper": "cpu.jpg",
+  "text": "Pokazuje temperaturę procesora raspberry pi",
+  "iotLib": "CPU-TEMP",
+  "execute": "CpuTemp()"
+}

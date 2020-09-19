@@ -3,7 +3,7 @@
 namespace main;
 session_start();
 
-require "/home/pi/www/dataBase/AddData.php";
+require_once "/home/pi/www/dataBase/AddData.php";
 
 
 if (isset($_POST["run"]) == "true") {
@@ -32,8 +32,9 @@ class Dht22
         $DHT_humid = $DHT[1];
 
 
-        $DHT_temp = str_replace('temp=', '', $DHT_temp);
-        $DHT_humid = str_replace('hum=', '', $DHT_humid);
+        $DHT_temp = trim(str_replace('temp=', '', $DHT_temp));
+        $DHT_humid = trim(str_replace('hum=', '', $DHT_humid));
+
 
         unset($_SESSION['DHT_temp']);
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace main;
+require "/home/pi/www/dataBase/AddData.php";
 
 
 class CpuTemp
@@ -15,5 +16,11 @@ class CpuTemp
         $CPU_temp = str_replace('temp=', '', $CPU_temp);
         $CPU_temp = str_replace('\'C', '', $CPU_temp);
         return $CPU_temp;
+    }
+
+
+    public function addToDB()
+    {
+        new AddData(self::$ID_DEVICE, self::getTemp());
     }
 }

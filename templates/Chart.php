@@ -1,9 +1,11 @@
 <?php
 
+namespace main;
+
 class Chart
 {
 
-    public function __construct($arrayChart)
+    public function __construct($arrayChart, $chartName)
     {
         echo <<<HTML
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -17,18 +19,18 @@ class Chart
         var options = {
             backgroundColor: 'white',
             fontSize: 9,
-            title: 'temperatura',
-            chartArea: {'width': '90%', 'height': '70%'},
+            title: '$chartName',
+            chartArea: {'width': '90%', 'height': '50%'},
             curveType: 'function',
             legend: {position: 'bottom'}
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('$chartName'));
 
         chart.draw(data, options);
     }
 </script>
-<div id="curve_chart" class="box" style="width: 630px; height: 310px; padding: 10px"></div>
+<div id="$chartName" class="box" style="width: 930px; height: 290px; padding: 10px"></div>
 HTML;
     }
 }

@@ -18,7 +18,7 @@ class AddData
 
 
 //        $time = date('Y-m-d H:i:s');
-        $time = time();
+        $time = date('Y-m-d H:i:s');
 
         $sql = "INSERT INTO IOT_measurement (id_Device, time ,value)
 VALUES ('$id_Device', '$time' , '$value')";

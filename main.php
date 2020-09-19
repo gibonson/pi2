@@ -49,9 +49,6 @@ require "dataBase/DataBaseToChart.php";
         case "AddNewJsonBox":
             new AddNewJsonStep2();
             break;
-        case "AddNewJsonBox2":
-            echo "form2";
-            break;
         case "showCalendar":
             new ShowCalendar();
             break;
@@ -60,7 +57,10 @@ require "dataBase/DataBaseToChart.php";
             $list->viewDevice();
             break;
         default:
-            new DataBaseToChart();
+            $chart = new DataBaseToChart();
+            $chart->getData(2, "stC", "Temperatura");
+            $chart->getData(3, "%", "Wilgotność");
+            $chart->getData(1, "stC", "Cpu_TEMP");
             $jsonBoxes = new FileScan("userFiles/jsonBoxes");
             foreach ($jsonBoxes->getFileList() as $servisName) {
                 if (strpos($servisName, "old")) {
