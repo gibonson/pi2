@@ -5,7 +5,7 @@ namespace main;
 
 use mysqli;
 
-include "config.php";
+include_once "config.php";
 
 
 class IotDeviceList

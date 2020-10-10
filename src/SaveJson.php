@@ -2,7 +2,7 @@
 
 
 namespace main;
-
+require_once "config.php";
 
 new SaveJson();
 
@@ -27,7 +27,7 @@ class SaveJson
         file_put_contents($filePath, $json);
         echo "ok";
 
-        require "fileOperation/Chmod777.php";
+        require "src/Chmod777.php";
 
     }
 

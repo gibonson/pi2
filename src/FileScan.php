@@ -18,16 +18,6 @@ class FileScan
         self::$fileList = $fileList;
     }
 
-
-    /**
-     * @param array|false $fileList
-     */
-    public
-    static function setFileList($fileList): void
-    {
-        self::$fileList = $fileList;
-    }
-
     /**
      * @return array|false
      */

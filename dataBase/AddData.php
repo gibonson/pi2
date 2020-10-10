@@ -3,7 +3,7 @@
 
 namespace main;
 
-include "/home/pi/www/config.php";
+include_once "/home/pi/www/config.php";
 
 
 class AddData

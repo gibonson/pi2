@@ -4,17 +4,17 @@ namespace main;
 
 use calendar\ShowCalendar;
 
-include "config.php";
+include_once "config.php";
 
 session_start();
-require "fileOperation/FileScan.php";
-require "fileOperation/FileSearch.php";
+require "src/FileScan.php";
+require "src/FileSearch.php";
 require "templates/ShowService.php";
 require "templates/form/AddNewJson.php";
 require "templates/form/AddNewJsonStep2.php";
 require "dataBase/DataBaseTest.php";
-require "fileOperation/JsonToForm.php";
-require "fileOperation/AddEditJsonBox.php";
+require "src/JsonToForm.php";
+require "src/AddEditJsonBox.php";
 require "calendar/ShowCalendar.php";
 require "dataBase/IotDeviceList.php";
 require "dataBase/DataBaseToChart.php";
@@ -28,15 +28,16 @@ require "dataBase/DataBaseToChart.php";
     <link rel="stylesheet" type="text/css" href="webResources/css/style_button.css">
     <link rel="stylesheet" type="text/css" href="webResources/css/style_link.css">
     <link rel="stylesheet" type="text/css" href="webResources/css/nav.css">
+    <link rel="icon" href="webResources/icon/icon-RPi-Logo.png">
 </head>
 
 <body>
 <header class="header">
     <ul>
         <?php
-        $menuBar = new FileScan("menuBar");
+        $menuBar = new FileScan("templates/menuBar");
         foreach (FileScan::getFileList() as $menu) {
-            include "menuBar" . "/" . $menu;
+            include "templates/menuBar" . "/" . $menu;
         }
         ?>
     </ul>

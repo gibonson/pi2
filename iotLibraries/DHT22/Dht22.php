@@ -1,7 +1,10 @@
 <?php
 
 namespace main;
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 
 require_once "/home/pi/www/dataBase/AddData.php";
 

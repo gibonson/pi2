@@ -19,7 +19,7 @@ class Router
 
 
         if(!isset($url[1])){
-            require '/home/pi/www/main.php';
+            require 'main.php';
             exit();
         }
         if ($url[1] == trim($route, "/")) {
