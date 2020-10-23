@@ -6,7 +6,8 @@ tail -f /var/log/apache2/error.log
 
 php -f /home/pi/www/calendar/cronPi.php
 
-exec('sudo python lcd/lcd_input.py 123 1123');
+sciągawka dla mnie:)
+exec('sudo python lcd/lcd_input.py dupa blada');
 
 
 .htaccess nadpisanie
@@ -18,5 +19,7 @@ sudo addgroup www-data
 sudo visudo and add
 #includedir /etc/sudoers.d
 %www-data  ALL=(ALL:ALL) NOPASSWD:ALL
+
+
 
 https://medium.com/@anujdev11/communication-between-arduino-and-raspberry-pi-using-nrf24l01-818687f7f363

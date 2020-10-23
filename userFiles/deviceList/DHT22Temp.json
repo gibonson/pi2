@@ -1,6 +1,0 @@
-{
-  "deviceNameFull": "DHT22 sensor Temperature",
-  "deviceNameShort": "DHT22 Temp",
-  "iotLib": "DHT22",
-  "deviceID" : "0002"
-}

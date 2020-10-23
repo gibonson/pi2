@@ -1,6 +1,0 @@
-{
-  "deviceNameFull": "Raspberry Pi Temperature",
-  "deviceNameShort": "RPI Temp",
-  "iotLib": "CpuTemp",
-  "deviceID" : "0001"
-}

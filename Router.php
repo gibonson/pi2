@@ -1,7 +1,9 @@
 <?php
+require_once "templates/MainPage.php";
 
 class Router
 {
+
 
     private $request;
 
@@ -12,21 +14,17 @@ class Router
 
     public function get($route, $file)
     {
-
-       $url = trim($this->request, "/");
-
+        $url = trim($this->request, "/");
         $url = explode("/", $url);
 
-
-        if(!isset($url[1])){
-            require 'main.php';
+        if (!isset($url[1])) {
+            new \templates\MainPage("templates/MenuBar.php", "templates/EmptySite.php");
             exit();
         }
-        if ($url[1] == trim($route, "/")) {
+        if ($url[1] == $route) {
             array_shift($url);
-            require $file;
+            new \templates\MainPage("templates/MenuBar.php", $file);
             exit();
         }
-
     }
 }
