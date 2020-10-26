@@ -1,0 +1,35 @@
+.button {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    background-color: #007500;
+    border: #e81717;
+    border-radius: 2px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    width: 200px;
+    height: 95px
+}
+
+.button-OFF {
+    background-color: #e81717
+}
+
+.button:hover {
+    background-color: #33af3b;
+}
+
+.button:active {
+    filter: grayscale(0) brightness(50%);,
+}
+
+.small_button {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    background-color: #009b00;
+    border: #e81717;
+    border-radius: 2px;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 25px;
+}
