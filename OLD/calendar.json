@@ -1,0 +1,22 @@
+[
+  {
+    "time": "00:00",
+    "command": "gpio -g write 13 1",
+    "periodTime": null
+  },
+  {
+    "time": "00:01",
+    "command": "gpio -g write 13 0",
+    "periodTime": null
+  },
+  {
+    "time": "00:00",
+    "command": "sudo php -f \/home\/pi\/www\/iotLibraries\/DHT22\/Insert.php",
+    "periodTime": 30
+  },
+  {
+    "time": "00:02",
+    "command": "sudo php -f \/home\/pi\/www\/iotLibraries\/CpuTemp\/Insert.php",
+    "periodTime": "30"
+  }
+]

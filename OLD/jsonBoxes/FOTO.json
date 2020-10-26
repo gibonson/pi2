@@ -1,0 +1,12 @@
+{
+  "boxname": "FOTO",
+  "wallpaper": "aparat.jpg",
+  "text": " link do ostatniego zdjecia <a href=\"/www/userFiles/img/cameraTestFile.jpg\">GET FOTO</a>",
+  "iotLib": "FOTO-RPI",
+  "form": {
+    "action": "camera",
+    "method": "POST",
+    "buttonClass": "button",
+    "buttonText": "Take a picture"
+  }
+}

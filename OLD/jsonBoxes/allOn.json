@@ -1,0 +1,39 @@
+{
+  "boxname": "All On",
+  "wallpaper": "przelacznik.jpg",
+  "text": "Wyłącza wszystkie przekaźniki",
+  "iotLib": "GPIO",
+  "form": {
+    "action": "GPIO",
+    "method": "POST",
+    "buttonClass": "button",
+    "buttonText": "ALL ON",
+    "input": [
+      {
+        "type": "hidden",
+        "name": "gpio[]",
+        "value": "13"
+      },
+      {
+        "type": "hidden",
+        "name": "gpio[]",
+        "value": "16"
+      },
+      {
+        "type": "hidden",
+        "name": "gpio[]",
+        "value": "20"
+      },
+      {
+        "type": "hidden",
+        "name": "gpio[]",
+        "value": "21"
+      },
+      {
+        "type": "hidden",
+        "name": "gpioValue",
+        "value": "1"
+      }
+    ]
+  }
+}
