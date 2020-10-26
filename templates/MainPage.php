@@ -4,9 +4,11 @@
 namespace templates;
 
 
+use templates\form\LogForm;
+
 class MainPage
 {
-    public function __construct($menuBar, $content)
+    public function __construct($menuBar, $content, $log = null)
     {
         echo <<<HTML
 <html>
@@ -23,7 +25,6 @@ class MainPage
 <body>
 <header class="header">
     <ul>
-
 HTML;
         require_once $menuBar;
         echo <<<HTML
@@ -34,6 +35,10 @@ HTML;
         require_once $content;
         echo <<<HTML
 </section>
+HTML;
+        echo $log;
+//        new LogForm($_SESSION["logData"]);
+        echo <<<HTML
 <footer>
 HTML;
         echo date('Y-m-d H:i:s');

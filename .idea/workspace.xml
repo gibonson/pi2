@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3cae69d1-ea3c-4e4a-8bb7-affa7a221e5a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="W" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1c909OancfBUCYMtV3DvopSYkH5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="W:/templates/form" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\templates\content" />
+      <recent name="W:\OLD" />
+      <recent name="W:\templates" />
+      <recent name="W:\iotLibrary" />
+      <recent name="W:\calendar" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\templates\form" />
+      <recent name="W:\iotLibrary\sensorDevice\CpuTemp" />
+      <recent name="W:\templates\menuBar" />
+      <recent name="W:\userFiles\event" />
+      <recent name="W:\templates" />
+    </key>
+  </component>
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cae69d1-ea3c-4e4a-8bb7-affa7a221e5a" name="Default Changelist" comment="" />
+      <created>1589925349680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589925349680</updated>
+      <workItem from="1589925351717" duration="1597000" />
+      <workItem from="1590088748692" duration="152000" />
+      <workItem from="1590096838303" duration="3795000" />
+      <workItem from="1590263326587" duration="13202000" />
+      <workItem from="1590527431785" duration="5073000" />
+      <workItem from="1591133068008" duration="4749000" />
+      <workItem from="1591305900439" duration="778000" />
+      <workItem from="1591307950014" duration="3264000" />
+      <workItem from="1591387725505" duration="6305000" />
+      <workItem from="1591479238460" duration="4354000" />
+      <workItem from="1592082746666" duration="7907000" />
+      <workItem from="1592256706688" duration="10676000" />
+      <workItem from="1592340256039" duration="8062000" />
+      <workItem from="1592381215985" duration="3179000" />
+      <workItem from="1592429716762" duration="6778000" />
+      <workItem from="1592516641574" duration="7269000" />
+      <workItem from="1592687096599" duration="4188000" />
+      <workItem from="1592770856767" duration="8202000" />
+      <workItem from="1592859340143" duration="10737000" />
+      <workItem from="1592942312154" duration="4273000" />
+      <workItem from="1593035427475" duration="4463000" />
+      <workItem from="1593122924417" duration="1028000" />
+      <workItem from="1593212139012" duration="1898000" />
+      <workItem from="1593376176755" duration="6482000" />
+      <workItem from="1593465217449" duration="972000" />
+      <workItem from="1593466529726" duration="582000" />
+      <workItem from="1593636566629" duration="5139000" />
+      <workItem from="1593764584584" duration="1889000" />
+      <workItem from="1593809046454" duration="7199000" />
+      <workItem from="1594071505327" duration="4906000" />
+      <workItem from="1594152243472" duration="3412000" />
+      <workItem from="1594225254169" duration="666000" />
+      <workItem from="1594241346735" duration="921000" />
+      <workItem from="1594327140701" duration="5774000" />
+      <workItem from="1594501069152" duration="2964000" />
+      <workItem from="1594761145084" duration="1309000" />
+      <workItem from="1594843738268" duration="6412000" />
+      <workItem from="1595106313236" duration="7858000" />
+      <workItem from="1595190141154" duration="7575000" />
+      <workItem from="1595274972322" duration="9250000" />
+      <workItem from="1595447709066" duration="8798000" />
+      <workItem from="1595535114173" duration="1948000" />
+      <workItem from="1595584125386" duration="4977000" />
+      <workItem from="1595593305326" duration="2572000" />
+      <workItem from="1595620334785" duration="1966000" />
+      <workItem from="1595622339770" duration="11492000" />
+      <workItem from="1595716828586" duration="2345000" />
+      <workItem from="1595799527103" duration="4321000" />
+      <workItem from="1595881745999" duration="6252000" />
+      <workItem from="1596053678718" duration="7456000" />
+      <workItem from="1596143377870" duration="6146000" />
+      <workItem from="1596225012528" duration="9839000" />
+      <workItem from="1596491658064" duration="934000" />
+      <workItem from="1596573693846" duration="5063000" />
+      <workItem from="1596662210148" duration="4116000" />
+      <workItem from="1596835233023" duration="5465000" />
+      <workItem from="1596972056712" duration="6002000" />
+      <workItem from="1597093269158" duration="5597000" />
+      <workItem from="1597179063055" duration="4628000" />
+      <workItem from="1597260367064" duration="2815000" />
+      <workItem from="1597263536740" duration="5205000" />
+      <workItem from="1597353961698" duration="6650000" />
+      <workItem from="1597613124237" duration="4670000" />
+      <workItem from="1597870361004" duration="2551000" />
+      <workItem from="1597873224647" duration="4965000" />
+      <workItem from="1597956061825" duration="10272000" />
+      <workItem from="1598040800588" duration="1964000" />
+      <workItem from="1598128681833" duration="9979000" />
+      <workItem from="1598214162977" duration="6704000" />
+      <workItem from="1598301078029" duration="2128000" />
+      <workItem from="1598305193829" duration="2046000" />
+      <workItem from="1598472511305" duration="9006000" />
+      <workItem from="1598558374449" duration="7999000" />
+      <workItem from="1598646859593" duration="4811000" />
+      <workItem from="1598815211171" duration="10345000" />
+      <workItem from="1598905693383" duration="2721000" />
+      <workItem from="1599080830967" duration="300000" />
+      <workItem from="1599161498846" duration="8247000" />
+      <workItem from="1599250264295" duration="7187000" />
+      <workItem from="1599419434652" duration="6649000" />
+      <workItem from="1599428934744" duration="173000" />
+      <workItem from="1600029793509" duration="3913000" />
+      <workItem from="1600115018805" duration="6230000" />
+      <workItem from="1600286989352" duration="5815000" />
+      <workItem from="1600547841471" duration="6186000" />
+      <workItem from="1600721591029" duration="1406000" />
+      <workItem from="1600980013379" duration="2710000" />
+      <workItem from="1601146381903" duration="317000" />
+      <workItem from="1601148409169" duration="9294000" />
+      <workItem from="1601239415983" duration="2548000" />
+      <workItem from="1601405779630" duration="14124000" />
+      <workItem from="1601674555291" duration="1530000" />
+      <workItem from="1602018480530" duration="5139000" />
+      <workItem from="1602188329001" duration="5959000" />
+      <workItem from="1602325468038" duration="3773000" />
+      <workItem from="1602354538588" duration="13685000" />
+      <workItem from="1602441417020" duration="3351000" />
+      <workItem from="1602444803877" duration="81000" />
+      <workItem from="1602444894641" duration="218000" />
+      <workItem from="1602445125662" duration="1476000" />
+      <workItem from="1602446694439" duration="4127000" />
+      <workItem from="1602528346821" duration="10600000" />
+      <workItem from="1602790231729" duration="6397000" />
+      <workItem from="1602872942814" duration="10828000" />
+      <workItem from="1602968655260" duration="115000" />
+      <workItem from="1602968850394" duration="179000" />
+      <workItem from="1602969173604" duration="54000" />
+      <workItem from="1602970735036" duration="4462000" />
+      <workItem from="1603050505764" duration="7615000" />
+      <workItem from="1603140650015" duration="309000" />
+      <workItem from="1603141096214" duration="5008000" />
+      <workItem from="1603306999381" duration="15205000" />
+      <workItem from="1603400485704" duration="9455000" />
+      <workItem from="1603442472051" duration="16405000" />
+      <workItem from="1603552966536" duration="3043000" />
+      <workItem from="1603567503450" duration="14372000" />
+      <workItem from="1603654052447" duration="5310000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.json" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="347" y="312" key="#CLI_Interpreters" timestamp="1599252312291">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="347" y="312" key="#CLI_Interpreters/0.40.3440.1400@0.40.3440.1400" timestamp="1599252312291" />
+    <state x="1212" y="314" key="#Other_File_Types" timestamp="1602446396283">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1212" y="314" key="#Other_File_Types/0.40.3440.1400@0.40.3440.1400" timestamp="1602446396283" />
+    <state x="509" y="230" key="#PHP" timestamp="1599252314030">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="509" y="230" key="#PHP/0.40.3440.1400@0.40.3440.1400" timestamp="1599252314030" />
+    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603570315828">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="583" y="523" key="#com.intellij.fileTypes.FileTypeChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1603570315828" />
+    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser" timestamp="1603051166106">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="628" y="387" key="#com.intellij.ide.util.MemberChooser/0.40.3440.1400@0.40.3440.1400" timestamp="1603051166106" />
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603656312853">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1727" y="40" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603656312853" />
+    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601675146917">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="784" y="768" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1601675146917" />
+    <state x="534" y="437" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603658858149">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="534" y="437" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603658858149" />
+    <state x="569" y="582" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602444667169">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="569" y="582" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.3440.1400@0.40.3440.1400" timestamp="1602444667169" />
+    <state x="597" y="437" key="FileChooserDialogImpl" timestamp="1603404248973">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="597" y="437" key="FileChooserDialogImpl/0.40.3440.1400@0.40.3440.1400" timestamp="1603404248973" />
+    <state x="697" y="635" key="NewPhpClassDialog" timestamp="1603657977168">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="697" y="635" key="NewPhpClassDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603657977168" />
+    <state x="915" y="697" key="NewPhpFileDialog" timestamp="1603464751601">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="915" y="697" key="NewPhpFileDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603464751601" />
+    <state x="252" y="296" key="SettingsEditor" timestamp="1602446242033">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="252" y="296" key="SettingsEditor/0.40.3440.1400@0.40.3440.1400" timestamp="1602446242033" />
+    <state x="92" y="132" width="3256" height="1216" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602445761630">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="92" y="132" width="3256" height="1216" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1602445761630" />
+    <state x="1932" y="112" width="1149" height="1164" key="dock-window-1" timestamp="1603579800385">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1932" y="112" width="1149" height="1164" key="dock-window-1/0.40.3440.1400@0.40.3440.1400" timestamp="1603579800385" />
+    <state x="1798" y="59" width="1428" height="1370" key="dock-window-2" timestamp="1602534773767">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1798" y="59" width="1428" height="1370" key="dock-window-2/0.40.3440.1400@0.40.3440.1400" timestamp="1602534773767" />
+    <state x="1272" y="40" width="1428" height="1370" key="dock-window-3" timestamp="1602534773767">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="1272" y="40" width="1428" height="1370" key="dock-window-3/0.40.3440.1400@0.40.3440.1400" timestamp="1602534773767" />
+    <state x="476" y="404" width="768" height="678" key="find.popup" timestamp="1602190432429">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="476" y="404" width="768" height="678" key="find.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1602190432429" />
+    <state x="542" y="317" key="refactoring.ChangeSignatureDialog" timestamp="1603052247965">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="542" y="317" key="refactoring.ChangeSignatureDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603052247965" />
+    <state x="94" y="366" key="run.anything.popup" timestamp="1598822661116">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="94" y="366" key="run.anything.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1598822661116" />
+    <state x="446" y="352" width="840" height="1034" key="search.everywhere.popup" timestamp="1603570966604">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="446" y="352" width="840" height="1034" key="search.everywhere.popup/0.40.3440.1400@0.40.3440.1400" timestamp="1603570966604" />
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603448664162">
+      <screen x="0" y="40" width="3440" height="1400" />
+    </state>
+    <state x="587" y="636" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.40.3440.1400@0.40.3440.1400" timestamp="1603448664162" />
+  </component>
+</project>

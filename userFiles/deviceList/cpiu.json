@@ -1,1 +1,4 @@
-{"deviceNameFull":"cpufull","iotLib":"iotLibrary\/sensorDevice\/CpuTemp"}
+{
+  "deviceNameFull": "cpufull",
+  "iotLib": "iotLibrary\/sensorDevice\/CpuTemp"
+}

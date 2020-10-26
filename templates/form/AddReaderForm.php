@@ -4,30 +4,30 @@ namespace templates;
 
 use File\FileScan;
 
-new AddEventForm();
+new AddReaderForm();
 
-class AddEventForm
+class AddReaderForm
 {
     public function __construct()
     {
-        $libList = new FileScan("iotLibrary/executiveDevice");
+        $libList = new FileScan("iotLibrary/sensorDevice");
 
         $formList = "";
         foreach ($libList->getAllFileList() as $executive) {
-            array_push($iotListWithPath, "iotLibrary/executiveDevice/" . $executive);
-            $formList = $formList . '<option value="iotLibrary/executiveDevice/' . $executive . '">iotLibrary/executiveDevice/' . $executive . '</option>';
+            array_push($iotListWithPath, "iotLibrary/sensorDevice/" . $executive);
+            $formList = $formList . '<option value="iotLibrary/sensorDevice/' . $executive . '">iotLibrary/sensorDevice/' . $executive . '</option>';
         }
 
 
         echo <<<HTML
-    <form action="eventAction" method="post">
+    <form action="readerAction" method="post">
             <input type="hidden" name="formStep" value="formStep2">
             <table>
                 <tr colspan="2">
-                    Add event:
+                    Add sensor:
                 </tr>
                 <tr>
-                    <th>Executive lib</th>
+                    <th>Sensor lib</th>
                     <th>
                         <select name="iotLib" id="iotLib">
                             $formList;

@@ -1,0 +1,12 @@
+{
+  "iotLib": "iotLibrary\/executiveDevice\/GPIO",
+  "eventNameFull": "gpiofulname",
+  "eventID": "01",
+  "boxBackground": "przelacznik.jpg",
+  "description": "wyłącza przekeazniki:<br> 13 16 18",
+  "parameters": {
+    "13": "low",
+    "16": "low",
+    "20": "low"
+  }
+}

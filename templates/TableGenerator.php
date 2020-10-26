@@ -32,7 +32,7 @@ class TableGenerator
             $singleRow = [];
         }
         echo "
-<table style='width:80%' border='1'>
+<table style='width:95%' border='1'>
   <tr>
   <td colspan='";
         echo count($columnNames) + 2;

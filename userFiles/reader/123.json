@@ -1,0 +1,10 @@
+{
+  "iotLib": "iotLibrary\/sensorDevice\/CpuTemp",
+  "readerNameFull": "readerfull name",
+  "readerID": "6",
+  "description": "reader description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "rpiCpuTemp": "stC"
+  }
+}

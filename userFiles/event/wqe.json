@@ -1,0 +1,10 @@
+{
+  "iotLib": "iotLibrary\/executiveDevice\/GPIO",
+  "eventNameFull": "qwe",
+  "eventID": "123",
+  "description": "event descriptionewqewq",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "16": "low"
+  }
+}

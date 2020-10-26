@@ -4,9 +4,9 @@ namespace templates;
 
 use File\FileScan;
 
-new AddEventFormStep2();
+new AddReaderFormStep2();
 
-class AddEventFormStep2
+class AddReaderFormStep2
 {
     public function __construct()
     {
@@ -26,25 +26,25 @@ class AddEventFormStep2
         }
 
         echo <<<HTML
-    <form action="eventAction" method="post">
+    <form action="readerAction" method="post">
             <input type="hidden" name="formStep" value="formStep3">
             <input type="hidden" name="iotLib" value="$iotLib">
             
             <table>
                 <tr colspan="2">
-                    Add event parameter:
+                    Add reader parameter:
                 </tr>
                 <tr>
-                    <th>eventName</th>
-                    <th><input type="text" name="fileName" placeholder="eventName"></th>
+                    <th>readerName</th>
+                    <th><input type="text" name="fileName" placeholder="readerName"></th>
                 </tr>
                 <tr>
-                    <th>eventNameFull</th>
-                    <th><input type="text" name="eventNameFull" placeholder="eventNameFull"></th>
+                    <th>readerNameFull</th>
+                    <th><input type="text" name="readerNameFull" placeholder="readerNameFull"></th>
                 </tr>
                 <tr>
-                    <th>eventID</th>
-                    <th><input type="number" name="eventID" placeholder="eventID"></th>
+                    <th>readerID</th>
+                    <th><input type="number" name="readerID" placeholder="readerID"></th>
                 </tr>
                 <tr>
                     <th>boxBackground</th>
@@ -55,8 +55,8 @@ class AddEventFormStep2
                     </th>
                 </tr>
                 <tr>
-                    <th>event Description</th>
-	                <th><textarea name="description" cols="50" rows="5">event description</textarea></th>
+                    <th>readerDescription</th>
+	                <th><textarea name="description" cols="50" rows="5">reader description</textarea></th>
 	            </tr>
                 <tr>
                     <th>Parameter</th>
@@ -70,6 +70,4 @@ class AddEventFormStep2
 HTML;
 
     }
-
-
 }

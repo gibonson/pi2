@@ -2,13 +2,14 @@
 
 namespace app\form;
 
-new EventAction();
+new ReaderAction();
 
-class EventAction
+class ReaderAction
 {
     public $path;
     public $fileName;
     public $iotLib;
+
 
     public function __construct()
     {
@@ -19,9 +20,9 @@ class EventAction
         switch ($_POST["action"]) {
             case null:
                 if (!isset($_POST["formStep"])) {
-                    require_once "templates/form/AddEventForm.php";
+                    require_once "templates/form/AddReaderForm.php";
                 } elseif ($_POST["formStep"] == "formStep2") {
-                    require_once "templates/form/AddEventFormStep2.php";
+                    require_once "templates/form/AddReaderFormStep2.php";
                 } elseif ($_POST["formStep"] == "formStep3") {
                     self::add();
                 }
@@ -39,15 +40,15 @@ class EventAction
     {
         print_r($_POST);
 
-        echo $fileName = $_POST["fileName"] . ".json";
+        $fileName = $_POST["fileName"] . ".json";
 
         $event = [];
 
         $event["iotLib"] = $_POST["iotLib"];
 
-        $event["eventNameFull"] = $_POST["eventNameFull"];
+        $event["readerNameFull"] = $_POST["readerNameFull"];
 
-        $event["eventID"] = $_POST["eventID"];
+        $event["readerID"] = $_POST["readerID"];
 
         $event["description"] = $_POST["description"];
 
@@ -76,7 +77,7 @@ class EventAction
         $eventJSON = json_encode($event);
         echo $eventJSON;
 
-        $fullPath = "userFiles/event/" . $fileName;
+        $fullPath = "userFiles/reader/" . $fileName;
 
         $myfile = fopen($fullPath, "w") or die("Unable to open file!");
         fwrite($myfile, $eventJSON);
@@ -87,7 +88,7 @@ class EventAction
 
     public function edit()
     {
-        echo "File Edit event";
+        echo "File edit reader";
     }
 
     public function remove()
@@ -100,4 +101,5 @@ class EventAction
         }
         header("Location: index");
     }
+
 }
