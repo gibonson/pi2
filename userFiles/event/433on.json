@@ -1,0 +1,10 @@
+{
+  "iotLib": "iotLibrary\/executiveDevice\/433",
+  "eventNameFull": "433fullname",
+  "eventID": "8",
+  "description": "event description",
+  "boxBackground": "modul433mhz.jpg",
+  "parameters": {
+    "5201": "exe"
+  }
+}

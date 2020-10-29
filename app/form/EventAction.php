@@ -56,8 +56,8 @@ class EventAction
         $parameters = [];
 
         if (isset($_POST["name1"])) {
+            echo "name1";
             $parameters[$_POST["name1"]] = $_POST["parameter1"];
-
         };
 
         if (isset($_POST["name2"])) {
@@ -71,8 +71,8 @@ class EventAction
         $event["parameters"] = $parameters;
 
         echo "<br>";
-        print_r($event);
 
+        print_r($event);
         $eventJSON = json_encode($event);
         echo $eventJSON;
 

@@ -1,4 +1,5 @@
-<select name="status">
+<input type="hidden" name="parameter1" value="exe">
+<select name="name1">
     <option value="4433">4433 - ON</option>
     <option value="4436">4436 - OFF</option>
     <option value="5201">5201 - ON</option>

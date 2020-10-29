@@ -19,7 +19,7 @@ class LogForm
                     <h1>LOGBOX</h1>
                 </tr>
                 <tr>
-            <textarea name="log" rows="10" cols="50">' .
+            <textarea name="log" rows="10" cols="100">' .
             $log . '
 </textarea >
 <br >

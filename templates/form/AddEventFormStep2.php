@@ -2,6 +2,9 @@
 
 namespace templates;
 
+require_once "app/form/GetNextID.php";
+
+use app\form\GetNextID;
 use File\FileScan;
 
 new AddEventFormStep2();
@@ -25,6 +28,9 @@ class AddEventFormStep2
             $backgroundList = $backgroundList . '<option value="' . $backgroundFile . '">' . $backgroundFile . '</option>';
         }
 
+
+        $nextID = new GetNextID();
+        $nextID = $nextID->getNextID();
         echo <<<HTML
     <form action="eventAction" method="post">
             <input type="hidden" name="formStep" value="formStep3">
@@ -44,7 +50,7 @@ class AddEventFormStep2
                 </tr>
                 <tr>
                     <th>eventID</th>
-                    <th><input type="number" name="eventID" placeholder="eventID"></th>
+                    <th><input type="number" name="eventID" placeholder="$nextID"></th>
                 </tr>
                 <tr>
                     <th>boxBackground</th>

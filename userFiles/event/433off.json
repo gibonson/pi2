@@ -1,0 +1,10 @@
+{
+  "iotLib": "iotLibrary\/executiveDevice\/433",
+  "eventNameFull": "offf",
+  "eventID": "9",
+  "description": "event description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "5204": "exe"
+  }
+}

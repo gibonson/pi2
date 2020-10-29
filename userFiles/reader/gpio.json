@@ -1,0 +1,10 @@
+{
+  "iotLib": "iotLibrary\/sensorDevice\/GpioStatus",
+  "readerNameFull": "pgio full name",
+  "readerID": "3",
+  "description": "reader gpio description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "0": "13"
+  }
+}

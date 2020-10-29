@@ -2,7 +2,10 @@
 
 namespace templates;
 
+use app\form\GetNextID;
 use File\FileScan;
+
+require_once "app/form/GetNextID.php";
 
 new AddReaderFormStep2();
 
@@ -25,6 +28,8 @@ class AddReaderFormStep2
             $backgroundList = $backgroundList . '<option value="' . $backgroundFile . '">' . $backgroundFile . '</option>';
         }
 
+        $nextID = new GetNextID();
+        $nextID = $nextID->getNextID();
         echo <<<HTML
     <form action="readerAction" method="post">
             <input type="hidden" name="formStep" value="formStep3">
@@ -44,7 +49,7 @@ class AddReaderFormStep2
                 </tr>
                 <tr>
                     <th>readerID</th>
-                    <th><input type="number" name="readerID" placeholder="readerID"></th>
+                    <th><input type="number" name="readerID" placeholder="$nextID"></th>
                 </tr>
                 <tr>
                     <th>boxBackground</th>

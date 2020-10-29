@@ -1,7 +1,7 @@
 {
   "iotLib": "iotLibrary\/sensorDevice\/DHT22",
   "readerNameFull": "dht22full name",
-  "readerID": "15",
+  "readerID": "2",
   "description": "reader description dht22",
   "boxBackground": "wilgotnosc.jpg",
   "parameters": {

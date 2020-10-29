@@ -1,7 +1,7 @@
 {
   "iotLib": "iotLibrary\/sensorDevice\/CpuTemp",
   "readerNameFull": "readerfull name",
-  "readerID": "6",
+  "readerID": "1",
   "description": "reader description",
   "boxBackground": "LCD.jpg",
   "parameters": {

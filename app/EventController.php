@@ -9,7 +9,6 @@ new EventController($_POST["form"]);
 
 class EventController
 {
-
     public function __construct($eventFile)
     {
         $file = file_get_contents("userFiles/event/" . $eventFile, "r");
@@ -18,5 +17,4 @@ class EventController
         new EventExe($event);
         header("Location: index");
     }
-
 }

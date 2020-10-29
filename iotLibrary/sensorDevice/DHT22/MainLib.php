@@ -31,6 +31,7 @@ class MainLib extends SensorDevice
 
         $log->addLog("temp -> " . $DHT_temp);
         $log->addLog("humid -> " . $DHT_humid);
-
+//        $_SESSION[self::getId()]["temp"] =$DHT_temp;
+//        $_SESSION[self::getId()]["humid"] =$DHT_humid;
     }
 }

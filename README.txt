@@ -1,3 +1,12 @@
+- poprawić biblioteki
+- grupowanie eventów
+- logika eventów
+- wykresy
+
+
+
+
+
 sudo pkill php
 ps ax | grep 'php -f /home/pi/www/calendar/cronPi.php'
 pgrep -fl aa.sh

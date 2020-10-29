@@ -1,4 +1,4 @@
-<li><img src="webResources/icon/icon-RPi-Logo.png" style="width:40px;height:40px;">
+<li><img src="webResources/icon/icon-RPi-Logo.png" style="width:60px;height:60px;">
     <ul>
         <li><a href="777"><img src="webResources/icon/icon-777.png"
                                style="width:40px;height:40px; -webkit-filter: invert(1);"></a></li>
