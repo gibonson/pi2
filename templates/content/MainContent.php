@@ -7,6 +7,7 @@ use app\ReaderExe;
 use File\FileScan;
 
 require_once "templates/EventBox.php";
+require_once "templates/PackBox.php";
 require_once "app/ReaderExe.php";
 
 
@@ -16,7 +17,6 @@ class MainContent
 {
     public function __construct()
     {
-
         $eventLst = new FileScan("userFiles/event", "json", true);
         foreach ($eventLst->getSearchFileList() as $fileName) {
             $file = file_get_contents("userFiles/event/" . $fileName, "r");
@@ -31,6 +31,12 @@ class MainContent
             new ReaderExe($jsonfile);
         }
 
+        $packList = new FileScan("userFiles/pack", "json", true);
+        foreach ($packList->getSearchFileList() as $fileName) {
+            $file = file_get_contents("userFiles/pack/" . $fileName, "r");
+            $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
+            new PackBox($jsonfile["fileName"], $jsonfile["description"], $jsonfile["boxBackground"]);
+        }
 
     }
 }

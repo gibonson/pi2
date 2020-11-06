@@ -29,7 +29,7 @@ class AddReaderFormStep2
         }
 
         $nextID = new GetNextID();
-        $nextID = $nextID->getNextID();
+        $nextID = $nextID->getNextID("reader");
         echo <<<HTML
     <form action="readerAction" method="post">
             <input type="hidden" name="formStep" value="formStep3">
@@ -49,7 +49,7 @@ class AddReaderFormStep2
                 </tr>
                 <tr>
                     <th>readerID</th>
-                    <th><input type="number" name="readerID" placeholder="$nextID"></th>
+                    <th><input type="hidden" name="readerID" value="$nextID">$nextID</th>
                 </tr>
                 <tr>
                     <th>boxBackground</th>

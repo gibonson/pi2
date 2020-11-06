@@ -40,7 +40,7 @@ class ReaderAction
     {
         print_r($_POST);
 
-        $fileName = $_POST["fileName"] . ".json";
+        $fileName = $_POST["fileName"] . "13.json";
 
         $event = [];
 

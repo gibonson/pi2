@@ -1,8 +1,8 @@
 {
   "iotLib": "iotLibrary\/executiveDevice\/433",
-  "eventNameFull": "433fullname",
+  "eventNameFull": "433-SOCKET-ON",
   "eventID": "8",
-  "description": "event description",
+  "description": "5201-ON",
   "boxBackground": "modul433mhz.jpg",
   "parameters": {
     "5201": "exe"

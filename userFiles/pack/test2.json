@@ -1,0 +1,10 @@
+{
+  "description": "events description",
+  "boxBackground": "programowanie.jpg",
+  "events": [
+    "433-ON.json",
+    "GPIO-21-ON.json",
+    "GPIO-OFF.json",
+    "GPIO-ON.json"
+  ]
+}

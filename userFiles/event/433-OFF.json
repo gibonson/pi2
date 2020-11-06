@@ -1,8 +1,8 @@
 {
   "iotLib": "iotLibrary\/executiveDevice\/433",
-  "eventNameFull": "offf",
+  "eventNameFull": "433-SOCKET-OFF",
   "eventID": "9",
-  "description": "event description",
+  "description": "5204-OFF",
   "boxBackground": "LCD.jpg",
   "parameters": {
     "5204": "exe"

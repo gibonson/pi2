@@ -1,7 +1,8 @@
 - poprawić biblioteki
-- grupowanie eventów
 - logika eventów
 - wykresy
+- dodawanie do bazy danych
+- kalendarz
 
 
 

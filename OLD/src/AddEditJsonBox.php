@@ -15,7 +15,7 @@ class AddEditJsonBox
             self::editJson($name, $file);
         }
         if ($addOrEdit == "add") {
-            $file = "iotLibraries/" . $name . "/" . $name . ".json";
+            $file = "iotLibraries/" . $name . "/" . $name . "13.json";
             self::addNewJson($name, $file);
         }
     }

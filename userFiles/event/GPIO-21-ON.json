@@ -1,8 +1,8 @@
 {
   "iotLib": "iotLibrary\/executiveDevice\/GPIO",
-  "eventNameFull": "qwe",
+  "eventNameFull": "GPIO-21-ON",
   "eventID": "4",
-  "description": "event descriptionewqewq",
+  "description": "włącza przekaźnik 21",
   "boxBackground": "LCD.jpg",
   "parameters": {
     "21": "high"

@@ -1,8 +1,8 @@
 {
   "iotLib": "iotLibrary\/executiveDevice\/GPIO",
-  "eventNameFull": "newfull",
+  "eventNameFull": "GPIO-21-OFF",
   "eventID": "5",
-  "description": "event description full",
+  "description": "wyłącza przekaźnik 21",
   "boxBackground": "LCD.jpg",
   "parameters": {
     "21": "low"

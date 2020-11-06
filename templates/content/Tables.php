@@ -32,5 +32,18 @@ class Tables
         new TableGenerator($eventList3, "userFiles/reader", "readerAction");
 
 
+
+        $list4 = new \File\FileScan("userFiles/pack", "json", true);
+        $eventList4 = [];
+        foreach ($list4->getSearchFileList() as $fileName) {
+            $file = file_get_contents("userFiles/pack/" . $fileName, "r");
+            $jsonfile = [];
+            $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
+            array_push($eventList4, $jsonfile);
+        }
+        new TableGenerator($eventList4, "userFiles/pack", "packAction");
+
+
+
     }
 }

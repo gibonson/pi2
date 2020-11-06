@@ -30,7 +30,7 @@ class AddEventFormStep2
 
 
         $nextID = new GetNextID();
-        $nextID = $nextID->getNextID();
+        $nextID = $nextID->getNextID("event");
         echo <<<HTML
     <form action="eventAction" method="post">
             <input type="hidden" name="formStep" value="formStep3">
@@ -50,7 +50,7 @@ class AddEventFormStep2
                 </tr>
                 <tr>
                     <th>eventID</th>
-                    <th><input type="number" name="eventID" placeholder="$nextID"></th>
+                    <th><input type="hidden" name="eventID" value="$nextID">$nextID</th>
                 </tr>
                 <tr>
                     <th>boxBackground</th>

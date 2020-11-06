@@ -4,8 +4,9 @@
 namespace templates;
 
 
-class EventBox
+class PackBox
 {
+
     public
     function __construct(string $boxName, string $boxContent, string $boxBackground)
     {
@@ -15,7 +16,7 @@ class EventBox
             <img class="back" src="userFiles/img/<?= $boxBackground ?>" alt=no back">
             <div class="text">
                 <div class="title"><?= $boxNameShort ?></div>
-                <form action="eventController" method="post">
+                <form action="packController" method="post">
                     <input type="submit" name="form" value="<?= $boxName ?>">
                 </form>
                 <?= $boxContent ?>
@@ -25,4 +26,6 @@ class EventBox
         </div>
         <?php
     }
+
+
 }

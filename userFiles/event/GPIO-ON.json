@@ -1,6 +1,6 @@
 {
   "iotLib": "iotLibrary\/executiveDevice\/GPIO",
-  "eventNameFull": "gpiofulname",
+  "eventNameFull": "GPIO-13-16-13-ON",
   "eventID": "6",
   "boxBackground": "przelacznik.jpg",
   "description": "włącza przekeazniki:<br> 13 16 18",

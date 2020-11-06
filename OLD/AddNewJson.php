@@ -12,7 +12,7 @@ class AddNewJson
             $style = "background:grey; cursor:pointer";
             $submitName = "Edit BOX";
         } else {
-            $name = $name . ".json";
+            $name = $name . "13.json";
             $submitName = $name;
             $style = "cursor:pointer";
         }

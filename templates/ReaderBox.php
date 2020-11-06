@@ -11,7 +11,7 @@ class ReaderBox
     function __construct(string $boxName, string $boxContent, string $boxBackground, array $results, array $parameters)
     {
 
-        $boxName = trim($boxName, ".json");
+        $boxName = str_replace(".json", "", $boxName);
         echo '' ?>
         <div class="box">
             <img class="back" src="userFiles/img/<?= $boxBackground ?>" alt=no back">
