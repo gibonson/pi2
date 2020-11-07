@@ -11,6 +11,7 @@ $log = new \app\log\LogAction();
 $router->get("eventAction", "app/form/EventAction.php", $log);
 $router->get("readerAction", "app/form/ReaderAction.php", $log);
 $router->get("packAction", "app/form/PackAction.php", $log);
+$router->get("logicAction", "app/form/LogicAction.php", $log);
 
 
 //os function
