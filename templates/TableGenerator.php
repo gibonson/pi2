@@ -55,7 +55,10 @@ class TableGenerator
             $rows = "";
             foreach ($singleRow as $singleValue) {
                 if (gettype($singleValue) == "array") {
-                    $singleValue = "table";
+                    foreach ($singleValue as $value => $item) {
+                        $singleValue = $singleValue . " " . $value . "=>" . $item . " ";
+                    }
+                    $singleValue = str_replace("Array ", "", $singleValue);
                 }
                 $rows = $rows . "<td>" . $singleValue . "</td>";
             }

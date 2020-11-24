@@ -1,0 +1,13 @@
+{
+  "time": "00:00",
+  "periodOfTime": "720",
+  "eventsList": [
+    "GPIO-21-ON.json"
+  ],
+  "readerList": [
+    "test.json"
+  ],
+  "logicList": [
+    "humid.json"
+  ]
+}

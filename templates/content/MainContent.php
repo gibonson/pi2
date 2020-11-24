@@ -8,6 +8,7 @@ use File\FileScan;
 
 require_once "templates/EventBox.php";
 require_once "templates/PackBox.php";
+require_once "templates/LogicBox.php";
 require_once "app/ReaderExe.php";
 
 
@@ -28,7 +29,7 @@ class MainContent
         foreach ($readerList->getSearchFileList() as $fileName) {
             $file = file_get_contents("userFiles/reader/" . $fileName, "r");
             $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
-            new ReaderExe($jsonfile);
+//            new ReaderExe($jsonfile);
         }
 
         $packList = new FileScan("userFiles/pack", "json", true);
@@ -36,6 +37,13 @@ class MainContent
             $file = file_get_contents("userFiles/pack/" . $fileName, "r");
             $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
             new PackBox($jsonfile["fileName"], $jsonfile["description"], $jsonfile["boxBackground"]);
+        }
+
+        $logicList = new FileScan("userFiles/logic", "json", true);
+        foreach ($logicList->getSearchFileList() as $fileName) {
+            $file = file_get_contents("userFiles/logic/" . $fileName, "r");
+            $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
+            new LogicBox($jsonfile);
         }
 
     }

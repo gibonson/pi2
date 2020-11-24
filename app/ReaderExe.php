@@ -15,14 +15,25 @@ require_once "templates/ReaderBox.php";
 
 class ReaderExe
 {
-    public function __construct(array $reader)
+    private $results;
+
+    public function __construct(array $reader, bool $onlyValue = null)
     {
 
 //        print_r($reader);
         $name = $reader["fileName"];
         $iotLib = $reader["iotLib"];
-        $fullName = $reader["readerNameFull"];
-        $id = $reader["readerID"];
+
+
+        if (!isset($onlyValue)) {
+            $fullName = $reader["readerNameFull"];
+            $id = $reader["readerID"];
+        } else {
+            $fullName = $reader["logicNameFull"];
+            $id = $reader["logicID"];
+        }
+
+
         $description = $reader["description"];
         $boxBackground = $reader["boxBackground"];
         $parameters = $reader["parameters"];
@@ -48,8 +59,21 @@ class ReaderExe
                 $results = $exe->getResults();
                 break;
         }
-        new ReaderBox($name, $description, $boxBackground, $results, $parameters);
 
+        if (!isset($onlyValue)) {
+            new ReaderBox($name, $description, $boxBackground, $results, $parameters);
+        } else {
+            $this->results = $results;
+        }
     }
+
+    /**
+     * @return array
+     */
+    public function getResults(): array
+    {
+        return $this->results;
+    }
+
 
 }

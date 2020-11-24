@@ -1,0 +1,20 @@
+{
+  "iotLib": "iotLibrary\/sensorDevice\/CpuTemp",
+  "logicNameFull": "logica name fulll",
+  "logicID": "10",
+  "description": "logic description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "rpiCpuTemp": "stC"
+  },
+  "condition": "bigger",
+  "value": "60",
+  "ifTrueEvents": [
+    "433-OFF.json",
+    "433-ON.json",
+    "GPIO-21-OFF.json",
+    "GPIO-21-ON.json",
+    "GPIO-OFF.json",
+    "GPIO-ON.json"
+  ]
+}

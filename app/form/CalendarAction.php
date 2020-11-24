@@ -1,11 +1,11 @@
 <?php
 
 
-namespace app\form;
+namespace app;
 
-new PackAction();
+new CalendarAction();
 
-class PackAction
+class CalendarAction
 {
     public function __construct()
     {
@@ -16,7 +16,7 @@ class PackAction
         switch ($_POST["action"]) {
             case null:
                 if (!isset($_POST["formStep"])) {
-                    require_once "templates/form/AddPackForm.php";
+                    require_once "templates/form/AddCalendarForm.php";
                 } elseif ($_POST["formStep"] == "formStep") {
                     self::add();
                 }
@@ -33,23 +33,20 @@ class PackAction
     public function add()
     {
         print_r($_POST);
+        $fileName = $_POST["calendarName"] . ".json";
+        $calendar["time"] = $_POST["time"];
+        $calendar["periodOfTime"] = $_POST["periodOfTime"];
+        $calendar["eventsList"] = $_POST["eventsList"];
+        $calendar["readerList"] = $_POST["readerList"];
+        $calendar["logicList"] = $_POST["logicList"];
 
-        $eventsPack = [];
+        $calendarJSON = json_encode($calendar);
+        echo $calendarJSON;
 
-        $fileName = $_POST["packName"] . ".json";
-        $eventsPack["description"] = $_POST["description"];
-        $eventsPack["boxBackground"] = $_POST["boxBackground"];
-        $eventsPack["events"] = $_POST["events"];
-
-        print_r($eventsPack);
-
-        $eventJSON = json_encode($eventsPack);
-        echo $eventJSON;
-
-        $fullPath = "userFiles/pack/" . $fileName;
+        $fullPath = "userFiles/calendar/" . $fileName;
 
         $myfile = fopen($fullPath, "w") or die("Unable to open file!");
-        fwrite($myfile, $eventJSON);
+        fwrite($myfile, $calendarJSON);
         fclose($myfile);
 
         require "app/osOperation/Chmod777.php";
@@ -64,4 +61,6 @@ class PackAction
     {
 
     }
+
+
 }

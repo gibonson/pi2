@@ -43,7 +43,25 @@ class Tables
         }
         new TableGenerator($eventList4, "userFiles/pack", "packAction");
 
+        $list5 = new \File\FileScan("userFiles/logic", "json", true);
+        $eventList5 = [];
+        foreach ($list5->getSearchFileList() as $fileName) {
+            $file = file_get_contents("userFiles/logic/" . $fileName, "r");
+            $jsonfile = [];
+            $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
+            array_push($eventList5, $jsonfile);
+        }
+        new TableGenerator($eventList5, "userFiles/logic", "logicAction");
 
 
+        $list6 = new \File\FileScan("userFiles/calendar", "json", true);
+        $eventList6 = [];
+        foreach ($list6->getSearchFileList() as $fileName) {
+            $file = file_get_contents("userFiles/calendar/" . $fileName, "r");
+            $jsonfile = [];
+            $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
+            array_push($eventList6, $jsonfile);
+        }
+        new TableGenerator($eventList6, "userFiles/calendar", "calendarAction");
     }
 }

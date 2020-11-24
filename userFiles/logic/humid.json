@@ -1,0 +1,20 @@
+{
+  "iotLib": "iotLibrary\/sensorDevice\/DHT22",
+  "logicNameFull": "humid",
+  "logicID": "10",
+  "description": "logic description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "humid": "%"
+  },
+  "condition": "smaller",
+  "value": "60",
+  "ifTrueEvents": [
+    "GPIO-21-OFF.json",
+    "GPIO-OFF.json"
+  ],
+  "ifFalseEvents": [
+    "GPIO-21-ON.json",
+    "GPIO-ON.json"
+  ]
+}

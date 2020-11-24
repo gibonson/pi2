@@ -1,0 +1,18 @@
+{
+  "iotLib": "iotLibrary\/sensorDevice\/DHT22",
+  "logicNameFull": "bew",
+  "logicID": "10",
+  "description": "logic description",
+  "boxBackground": "LCD.jpg",
+  "parameters": {
+    "temp": "stC"
+  },
+  "condition": "smaller",
+  "value": "60",
+  "ifTrueEvents": [
+    "433-OFF.json"
+  ],
+  "ifFalseEvents": [
+    "433-ON.json"
+  ]
+}
