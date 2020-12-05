@@ -10,7 +10,7 @@
   "condition": "smaller",
   "value": "60",
   "ifTrueEvents": [
-    "433-OFF.json"
+    "GPIO-21-OFF.json"
   ],
   "ifFalseEvents": [
     "433-ON.json"

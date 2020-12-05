@@ -12,11 +12,11 @@ class EventExe
 {
     public function __construct(array $event)
     {
-        echo $name = $event["device"];
-        echo $fullName = $event["eventNameFull"];
-        echo $id = $event["eventID"];
-        echo $executiveArray = $event["parameters"];
-        echo $iotLib = $event["iotLib"];
+        $name = $event["fileName"];
+        $fullName = $event["eventNameFull"];
+        $id = $event["eventID"];
+        $executiveArray = $event["parameters"];
+        $iotLib = $event["iotLib"];
 
 
         switch ($iotLib) {

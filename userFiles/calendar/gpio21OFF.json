@@ -1,0 +1,9 @@
+{
+  "time": "00:01",
+  "periodOfTime": "2",
+  "eventsList": [
+    "GPIO-21-OFF.json"
+  ],
+  "readerList": null,
+  "logicList": null
+}

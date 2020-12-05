@@ -1,5 +1,6 @@
 body {
-    font-family: 'Courier New', sans-serif;
+    /*font-family: 'Courier New', sans-serif;*/
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     background-image: url("../../webResources/background/woda.jpg");
     background-attachment: fixed;
@@ -9,34 +10,103 @@ body {
     background-color: #000000;
     color: #fff1c6;
     margin: auto;
+    text-align: center;
 }
+
 
 header {
-    position: fixed;
-    width: 100%;
+    /*overflow: hidden;*/
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%);
-    z-index: 99;
-    text-align: center;
-}
-
-.header_title {
     position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 999;
+}
+
+header form {
+    display: inline;
+}
+
+header a {
+    font-size: 20px;
+    color: white;
     text-align: center;
-    font-size: 3rem;
-    opacity: 0.8;
+    vertical-align: center;
+    line-height: 60px;
+    text-decoration: none;
 }
 
-.header_content {
-    float: right;
-    text-align: right;
-    margin: 10px;
+header img {
+    display: inline;
+    width: 60px;
+    height: 60px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    vertical-align: center;
+}
+
+.subnav {
+    display: inline-block;
+    overflow: hidden;
+    text-align-last: center;
+}
+
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+header a:hover, .subnav:hover .subnavbtn {
+    background-color: #3f3f3f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.subnav-content {
+    display: none;
+    position: fixed;
+    background-color: #3f3f3f;
+    margin-left: -80px;
+    padding-right: 10px;
+    padding-left: 10px;
+    /*width: 100%;*/
+    z-index: 3;
+    /*height: 65px;*/
+    text-align: center;
+    vertical-align: center;
+    line-height: 90px;
+    border-radius: 10px;
 
 }
 
-.header_content_left {
-    float: left;
-    margin: 10px;
+.subnav-content a {
+    overflow: auto;
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.subnav-content img {
+    margin-bottom: -20px;
+}
+
+.subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+
 }
 
 footer {
@@ -50,23 +120,38 @@ footer {
 }
 
 section {
-    padding-top: 90px;
+    padding-top: 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 .box {
+    z-index: 0;
     background: #111111;
     margin: 5px;
     width: 310px;
     height: 310px;
     border-radius: 6px;
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    text-align: left;
+
+}
+
+.box .back {
+    border-radius: 6px;
+    height: 310px;
+    width: 310px;
+    filter: grayscale(100%) brightness(2%);
+    position: absolute;
+    z-index: 1;
+
 }
 
 .box .text {
+    z-index: 2;
     text-align: center;
     position: relative;
     display: block;
@@ -75,12 +160,44 @@ section {
 .box .text .title {
     font-size: 1.5rem;
     line-height: 2;
+    font-weight: bold;
 }
 
-.box .back {
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
     border-radius: 6px;
-    height: 310px;
-    width: 310px;
-    filter: grayscale(100%) brightness(10%);
-    position: absolute;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #26af08;
+}
+
+
+table {
+    width: 80%;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+th, td {
+    text-align: center;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #5d5d5d;
+}
+
+tr:nth-child(odd) {
+    background-color: #3f3f3f;
 }

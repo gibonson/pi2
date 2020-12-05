@@ -3,17 +3,21 @@
 
 namespace app\calendar;
 
+use app\EventExe;
+use app\LogicController;
+use app\ReaderExe;
 use File\FileScan;
 
-//require_once "app/calendar/Event.php";
 require_once "app/calendar/CodeTime.php";
 require_once "app/fileOperation/FileScan.php";
+require_once "app/EventExe.php";
+require_once "app/ReaderExe.php";
+require_once "app/LogicController.php";
 
 new Calendar();
 
 class Calendar
 {
-
     public function __construct()
     {
         $dayPlanList = [];
@@ -57,66 +61,46 @@ class Calendar
         echo "\n";
         echo "\n";
         print_r($dayPlanList);
+        $lastTime = 0;
+
+        while (true) {
+            echo "\n";
+            echo date("H:i");
+            echo $currentTime = date("H") * 60 + date("i");
+            echo "\n";
+
+            if ($currentTime <> $lastTime) {
+                foreach ($dayPlanList as $planTime => $events) {
+                    if ($currentTime == $planTime) {
+                        echo "\n";
+                        print_r($events["eventsList"] = array_unique($events["eventsList"]));
+                        foreach ($events["eventsList"] as $event) {
+                            $file = file_get_contents("userFiles/event/" . $event, "r");
+                            $event = json_decode($file, true);
+                            print_r($event);
+                            new EventExe($event);
+                        }
+                        echo "\n";
+                        print_r($events["readerList"] = array_unique($events["readerList"]));
+                        foreach ($events["readerList"] as $reader) {
+                            $file = file_get_contents("userFiles/reader/" . $reader, "r");
+                            $jsonfile = array("fileName" => $reader) + json_decode($file, true);
+                            new ReaderExe($jsonfile);
+
+                        }
+                        echo "\n";
+                        print_r($events["logicList"] = array_unique($events["logicList"]));
+                        foreach ($events["logicList"] as $logic) {
+                            new LogicController($logic);
+                        }
+                        echo "\n";
+                    }
+                }
+                $lastTime = $currentTime;
+            } else {
+                echo "skip";
+            }
+            sleep(1);
+        }
     }
-
-
-//    public function __construct()
-//    {
-//        $calenderFile = file_get_contents("/home/pi/www/userFiles/calendar.json", "r+") or die("Unable to open file!");
-//        $calenderJson = json_decode($calenderFile, true);
-//
-//
-//        $eventList = [];
-//
-//
-//        foreach ($calenderJson as $key => $value) {
-//            echo "\n";
-//            echo $time = $value["time"];
-//            $codeTime = explode(":", $time);
-//            $codeTime = $codeTime[0] * 60 + $codeTime[1];
-//            echo "\t";
-//            echo $command = $value["command"];
-//            echo "\t";
-//            if (isset($value["periodTime"])) {
-//                echo $periodTime = $value["periodTime"];
-//                echo "\t";
-//                while ($codeTime < 1439) {
-//                    if (!isset($eventList[$codeTime])) {
-//                        $eventList[$codeTime] = [];
-//                    }
-//                    array_push($eventList[$codeTime], $command);
-//                    $codeTime = $codeTime + $periodTime;
-//                }
-//            } else {
-//                if (!isset($eventList[$codeTime])) {
-//                    $eventList[$codeTime] = [];
-//                }
-//                array_push($eventList[$codeTime], $command);
-//            }
-//        }
-//        ksort($eventList);
-//        print_r($eventList);
-//
-//
-//        while (true) {
-//            echo "\n";
-//            echo date("H:i");
-//            echo " ";
-//            echo $currentTime = date("H") * 60 + date("i");
-//            echo "\n";
-//
-//            foreach ($eventList as $date => $key) {
-//                if ("$date" == "$currentTime") {
-//                    foreach ($key as $command => $value) {
-//                        shell_exec($value);
-//                    }
-//                }
-//            }
-//            sleep(60);
-//        }
-//
-//    }
-//}
-//
-
 }

@@ -7,7 +7,7 @@
   "parameters": {
     "humid": "%"
   },
-  "condition": "smaller",
+  "condition": "bigger",
   "value": "60",
   "ifTrueEvents": [
     "GPIO-21-OFF.json",

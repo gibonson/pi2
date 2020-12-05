@@ -32,11 +32,11 @@ class TableGenerator
             $singleRow = [];
         }
         echo "
-<table style='width:95%' border='1'>
+<table>
   <tr>
   <td colspan='";
         echo count($columnNames) + 2;
-        echo "'>$path</td>
+        echo "'><h1>$path</h1></td>
   </tr>
   <tr>
     <td>Lp</td>";
@@ -46,7 +46,7 @@ class TableGenerator
         }
         echo $titleTables;
 
-        echo "
+        echo "<td></td>
   </tr>";
         $lp = 0;
         foreach ($rows as $singleRow) {

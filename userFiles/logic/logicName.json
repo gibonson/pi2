@@ -8,7 +8,7 @@
     "rpiCpuTemp": "stC"
   },
   "condition": "bigger",
-  "value": "60",
+  "value": "20",
   "ifTrueEvents": [
     "433-OFF.json",
     "433-ON.json",
@@ -16,5 +16,8 @@
     "GPIO-21-ON.json",
     "GPIO-OFF.json",
     "GPIO-ON.json"
+  ],
+  "ifFalseEvents": [
+    "433-ON.json"
   ]
 }

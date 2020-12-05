@@ -8,7 +8,10 @@ require_once "app/EventExe.php";
 
 use app\log\LogAction;
 
-new LogicController($_POST["form"]);
+if (isset($_POST["form"])) {
+    $_POST["form"] = $_POST["form"] . ".json";
+    new LogicController($_POST["form"]);
+}
 
 
 class LogicController
@@ -18,7 +21,7 @@ class LogicController
         $log = new LogAction();
 
         print_r($fileName);
-        $file = file_get_contents("userFiles/logic/" . $fileName . ".json", "r");
+        $file = file_get_contents("userFiles/logic/" . $fileName, "r");
         $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
         print_r($jsonfile);
         $result = new ReaderExe($jsonfile, true);
@@ -65,18 +68,17 @@ class LogicController
         }
         $log->addLog($item . " " . $jsonfile["condition"] . " " . $jsonfile["value"] . " -> " . $status);
         header("Location: index");
-
-
     }
 
-    public function condition($eventList)
+    public function condition($eventList = null)
     {
-        foreach ($eventList as $event) {
-            $file = file_get_contents("userFiles/event/" . $event, "r");
-            $event = json_decode($file, true);
-            print_r($event);
-            new EventExe($event);
+        if (isset($eventList)) {
+            foreach ($eventList as $event) {
+                $file = file_get_contents("userFiles/event/" . $event, "r");
+                $event = array("fileName" => $event) + json_decode($file, true);
+//                print_r($event);
+                new EventExe($event);
+            }
         }
     }
-
 }
