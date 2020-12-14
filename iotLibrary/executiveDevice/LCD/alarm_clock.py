@@ -35,16 +35,19 @@ oldLine = ""
 
 try:
     while var == 1:
-        print("Writing to display")
-        data = urllib2.urlopen("http://192.168.0.112/www/LCD_data").read(20000) # read only 20 000 chars
-        data = data.split("\n") # then split it into lines
-        if "text" in data[0]:
-            if data[1] != oldLine:
-                display.lcd_clear()
-            display.lcd_display_string(data[1], 2)
-            oldLine = data[1]
-        else:
-            display.lcd_clear()
+
+
+    #    print("Writing to display")
+    #    data = urllib2.urlopen("http://192.168.0.112/www/LCD_data").read(20000) # read only 20 000 chars
+    #    data = data.split("\n") # then split it into lines
+    #    if "text" in data[0]:
+    #        if data[1] != oldLine:
+    #            display.lcd_clear()
+    #        display.lcd_display_string(data[1], 2)
+    #        oldLine = data[1]
+    #    else:
+    #        display.lcd_clear()
+
         display.lcd_display_string(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")), 1)
 
         time.sleep(1)

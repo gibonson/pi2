@@ -13,6 +13,7 @@ require_once "app/fileOperation/FileScan.php";
 require_once "app/EventExe.php";
 require_once "app/ReaderExe.php";
 require_once "app/LogicController.php";
+require_once "config.php";
 
 new Calendar();
 
@@ -84,8 +85,9 @@ class Calendar
                         print_r($events["readerList"] = array_unique($events["readerList"]));
                         foreach ($events["readerList"] as $reader) {
                             $file = file_get_contents("userFiles/reader/" . $reader, "r");
-                            $jsonfile = array("fileName" => $reader) + json_decode($file, true);
-                            new ReaderExe($jsonfile);
+                            $jsonFile = array("fileName" => $reader) + json_decode($file, true);
+                            $addValueToDB = new ReaderExe($jsonFile);
+                            $addValueToDB->addToDataBase();
 
                         }
                         echo "\n";

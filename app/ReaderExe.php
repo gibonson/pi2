@@ -16,6 +16,8 @@ require_once "templates/ReaderBox.php";
 class ReaderExe
 {
     private $results;
+    private $parameters;
+    private $id;
 
     public function __construct(array $reader, bool $onlyValue = null)
     {
@@ -32,11 +34,12 @@ class ReaderExe
             $fullName = $reader["logicNameFull"];
             $id = $reader["logicID"];
         }
-
+        $this->id = $id;
 
         $description = $reader["description"];
         $boxBackground = $reader["boxBackground"];
         $parameters = $reader["parameters"];
+        $this->parameters = $parameters;
 //        print_r($parameters);
 
 
@@ -62,6 +65,7 @@ class ReaderExe
 
         if (!isset($onlyValue)) {
             new ReaderBox($name, $description, $boxBackground, $results, $parameters);
+            $this->results = $results;
         } else {
             $this->results = $results;
         }
@@ -73,6 +77,58 @@ class ReaderExe
     public function getResults(): array
     {
         return $this->results;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    public function addToDataBase()
+    {
+        $conn = mysqli_connect(DATABASE_HOST, DATABASE_USER, DATABASE_PASSOWD, DATABASE_NAME);
+
+        $id = self::getId();
+        $results = self::getResults();
+        $parameters = self::getParameters();
+
+        foreach ($results as $type => $result) {
+            $unit = $parameters["$type"];
+            $sql = "INSERT INTO measurement (date, id_device, type, result, unit)
+    VALUES(CURRENT_TIMESTAMP,'$id','$type','$result','$unit')";
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+
+
+//        echo "addddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
+//        $fileName = "test . json";
+//        $output["timeStamp"] = "888";
+//        $output["value"] = self::getResults();
+//        $output["parameter"] = self::getParameters();
+//        $output["id"] = self::getId();
+//        $calendarJSON = json_encode($output);
+//        echo $calendarJSON;
+//        $fullPath = "userFiles / " . $fileName;
+//        $myfile = fopen($fullPath, "w") or die("Unable to open file!");
+//        fwrite($myfile, $calendarJSON);
+//        fclose($myfile);
     }
 
 

@@ -23,8 +23,10 @@ class AddEventForm
     <form action="eventAction" method="post">
             <input type="hidden" name="formStep" value="formStep2">
             <table>
-                <tr colspan="2">
+                <tr>
+                <th colspan="2">
                     Add event:
+                </th>
                 </tr>
                 <tr>
                     <th>Executive lib</th>

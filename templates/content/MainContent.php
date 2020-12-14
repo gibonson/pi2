@@ -29,7 +29,7 @@ class MainContent
         foreach ($readerList->getSearchFileList() as $fileName) {
             $file = file_get_contents("userFiles/reader/" . $fileName, "r");
             $jsonfile = array("fileName" => $fileName) + json_decode($file, true);
-//            new ReaderExe($jsonfile);
+            new ReaderExe($jsonfile);
         }
 
         $packList = new FileScan("userFiles/pack", "json", true);

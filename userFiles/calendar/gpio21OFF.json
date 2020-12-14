@@ -1,9 +1,12 @@
 {
   "time": "00:01",
-  "periodOfTime": "2",
+  "periodOfTime": "15",
   "eventsList": [
     "GPIO-21-OFF.json"
   ],
-  "readerList": null,
+  "readerList": [
+    "RPI-CPU.json",
+    "dht22.json"
+  ],
   "logicList": null
 }

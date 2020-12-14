@@ -37,8 +37,8 @@ class AddCalendarForm
     <form action="calendarAction" method="post">
     <input type="hidden" name="formStep" value="formStep">
             <table>
-                <tr colspan="2">
-                    Add calendar:
+                <tr>
+                    <th colspan="2">Add calendar:</th>
                 </tr>
                 <tr>
                     <th>calendarName</th>

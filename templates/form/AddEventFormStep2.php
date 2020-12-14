@@ -37,8 +37,8 @@ class AddEventFormStep2
             <input type="hidden" name="iotLib" value="$iotLib">
             
             <table>
-                <tr colspan="2">
-                    Add event parameter:
+                <tr>
+                <th colspan="2">Add event parameter:</th>
                 </tr>
                 <tr>
                     <th>eventName</th>

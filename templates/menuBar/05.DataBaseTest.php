@@ -9,7 +9,7 @@ if (!$conn) {
     $DBStatus = '<img class="img_menu" src="webResources/icon/icon-database-error.png" alt="failed" >';
 //            echo "Connection failed: " . mysqli_connect_error();
 } else {
-    $DBStatus = ' <a href="sqlView"><img class="img_menu" src="webResources/icon/icon-database.png" alt="ok"></a>';
+    $DBStatus = ' <a href="SqlTableViewer"><img class="img_menu" src="webResources/icon/icon-database.png" alt="ok"></a>';
 }
 ?>
 <div class="subnav">

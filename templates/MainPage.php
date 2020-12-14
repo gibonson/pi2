@@ -24,8 +24,8 @@ class MainPage
 <body>
 <header class="header">
 HTML;
-require_once $menuBar;
-echo <<<HTML
+        require_once $menuBar;
+        echo <<<HTML
 </header>
 <section>
 HTML;
@@ -40,7 +40,7 @@ HTML;
 HTML;
         echo date('Y-m-d H:i:s');
         echo <<<HTML
-     Jakub Palica &copy; copyright 1410
+     <br>Jakub Palica &copy; copyright 1410
 </footer>
 </body>
 </html>
