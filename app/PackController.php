@@ -19,10 +19,9 @@ class PackController
         print_r($events["events"]);
 
         foreach ($events["events"] as $event) {
-
             $file = file_get_contents("userFiles/event/" . $event, "r");
             $event = json_decode($file, true);
-            print_r($event);
+//            print_r($event);
             new EventExe($event);
         }
         header("Location: index");

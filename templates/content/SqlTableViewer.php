@@ -14,6 +14,43 @@ class SqlTableViewer
 {
     public function __construct()
     {
+
+
+        if (isset($_POST["type"])) {
+            $type = explode("|", $_POST["type"]);
+            $tableName = $type[0];
+            $idDevice = $type[1];
+            $type = $type[2];
+            setcookie("showTable", $_POST["showTable"], time() + (86400), "/");
+        } elseif (isset($_COOKIE["type"])) {
+            $type = explode("|", $_COOKIE["type"]);
+            $tableName = $type[0];
+            $idDevice = $type[1];
+            $type = $type[2];
+        } else {
+            $tableName = "CPU temperature[stC]";
+            $idDevice = 1;
+            $type = "rpiCpuTemp";
+        }
+        if (isset($_POST["range"])) {
+            $range = $_POST["range"];
+            setcookie("range", $_POST["range"], time() + (86400), "/");
+        } elseif (isset($_COOKIE["type"])) {
+            $range = $_COOKIE["range"];
+        } else {
+            $range = 24;
+        }
+
+        if (isset($_POST["showTable"])) {
+            $showTable = $_POST["showTable"];
+            setcookie("showTable", $_POST["showTable"], time() + (86400), "/");
+        } elseif (isset($_COOKIE["showTable"])) {
+            $showTable = $_COOKIE["showTable"];
+        } else {
+            $showTable = "false";
+        }
+
+
         echo <<<HTML
     <form action="SqlTableViewer" method="post">
             <table>
@@ -34,7 +71,13 @@ class SqlTableViewer
                     <th>range</th>
                     <th><input type="number" name="range" value="24"></th>
                 </tr>
-               
+                    <th>ShowTable</th>
+                    <th>
+                        <select name="showTable">
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                    </th>
                 <tr>
                     <th colspan="2"><input type="submit" value="Show"></th>
                 </tr>
@@ -42,34 +85,8 @@ class SqlTableViewer
     </form>
 HTML;
 
-        if (isset($_POST["type"])) {
-            $type = explode("|", $_POST["type"]);
-            $tableName = $type[0];
-            $idDevice = $type[1];
-            $type = $type[2];
-            setcookie("type", $_POST["type"], time() + (86400), "/");
-        } elseif (isset($_COOKIE["type"])) {
-            $type = explode("|", $_COOKIE["type"]);
-            $tableName = $type[0];
-            $idDevice = $type[1];
-            $type = $type[2];
-        } else {
-            $tableName = "CPU temperature[stC]";
-            $idDevice = 1;
-            $type = "rpiCpuTemp";
-        }
-        if (isset($_POST["range"])) {
-            $range = $_POST["range"];
-            setcookie("range", $_POST["range"], time() + (86400), "/");
-        } elseif (isset($_COOKIE["type"])) {
-            $range = $_COOKIE["range"];
-        } else {
-            $range = 24;
-        }
-
         echo "<br>";
-        new TableView($tableName, $idDevice, $type, $range);
-
+        new TableView($tableName, $idDevice, $type, $range, $showTable);
     }
 
 

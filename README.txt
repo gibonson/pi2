@@ -1,8 +1,11 @@
-- poprawić biblioteki
-- logika eventów
-- wykresy
-- dodawanie do bazy danych
-- kalendarz
+- dodać biblioteki (ds18b20, nrf24lo1, www)
+- poprawić operacje na plikach
+- wycentrować wykresy (dynamicznie?)
+- ikona do wykresów
+- skanowanie wartości  id nazwa z tabeli pomiary
+- pokoje??
+
+- obsługa błędów!!!!
 
 
 
